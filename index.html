@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pressure.JS</title>
+    <link rel="stylesheet" href="styles/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="dist/pressure.js"></script>
 </head>
 <body>
+    <div id="header"></div>
     <canvas id="test" width="1000" height="2000" style="border: 1px solid black"></canvas>
     <script src="paint.js"></script>
+    <script>
+    $(function(){
+    $('#header').load('./navbar.html')
+});
+    </script>
 </body>
 </html>

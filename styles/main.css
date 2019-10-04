@@ -1,0 +1,31 @@
+nav li {
+    list-style-type: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+header{
+    background-color: #33691E;
+    margin: 0;
+}
+
+header h1 {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+    line-height: 40px;
+}
+
+nav img {
+    opacity: 0.3;
+}
+
+canvas {
+    width: 100%
+}
