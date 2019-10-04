@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Pen</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Pen;
+		--web-view-id: Pen;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Pen;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	#Pen {
+		position: absolute;
+		box-sizing: border-box;
+		background: #E5E5E5;
+		width: 375px;
+		height: 812px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		--web-view-name: Pen;
+		--web-view-id: Pen;
+		--web-enable-deep-linking: true;
+	}
+	#Navigation_Bar_6 {
+		position: absolute;
+		width: 375px;
+		height: 56px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Rectangle_192 {
+		position: absolute;
+		overflow: visible;
+		width: 375px;
+		height: 56px;
+		left: 0px;
+		top: 0px;
+	}
+	#Profile {
+		opacity: 0.3;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 245px;
+		top: 20px;
+		overflow: visible;
+	}
+	.Union_1 {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 16px;
+		height: 16px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Settings {
+		opacity: 0.3;
+		position: absolute;
+		width: 16.2px;
+		height: 16px;
+		left: 311px;
+		top: 20px;
+		overflow: visible;
+	}
+	.Rectangle_193 {
+		position: absolute;
+		overflow: visible;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+	}
+	.Path_104 {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 1px;
+		width: 15.2px;
+		height: 16px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Compose {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 179px;
+		top: 20px;
+		overflow: visible;
+	}
+	.Rectangle_324 {
+		position: absolute;
+		overflow: visible;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+	}
+	.Path_110 {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 16px;
+		height: 16px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Folder {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 60px;
+		top: 20px;
+		overflow: visible;
+	}
+	.Path_178 {
+		overflow: visible;
+		position: absolute;
+		top: 2px;
+		left: 0px;
+		width: 16px;
+		height: 12.013px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Rectangle_1447 {
+		position: absolute;
+		overflow: visible;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+	}
+	#Photos {
+		position: absolute;
+		width: 106px;
+		height: 16px;
+		left: 121px;
+		top: 20px;
+		overflow: visible;
+	}
+	.Rectangle_549 {
+		position: absolute;
+		overflow: visible;
+		width: 16px;
+		height: 16px;
+		left: 90px;
+		top: 0px;
+	}
+	.Path_148 {
+		overflow: visible;
+		position: absolute;
+		top: 2px;
+		left: 0px;
+		width: 16px;
+		height: 12px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Color {
+		position: absolute;
+		width: 375px;
+		height: 129px;
+		left: 0px;
+		top: 66px;
+		overflow: visible;
+	}
+	#COLOR {
+		position: absolute;
+		left: 24px;
+		top: 0px;
+		overflow: visible;
+		width: 52px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(85,139,47,1);
+	}
+	.line {
+		position: absolute;
+		overflow: visible;
+		width: 375px;
+		height: 1px;
+		left: 0px;
+		top: 88px;
+	}
+	.Path_180 {
+		overflow: visible;
+		position: absolute;
+		top: 40px;
+		left: 24px;
+		width: 24px;
+		height: 24px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Ellipse_166 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 75px;
+		top: 40px;
+	}
+	.Ellipse_167 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 125px;
+		top: 40px;
+	}
+	.Ellipse_168 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 176px;
+		top: 40px;
+	}
+	.Ellipse_169 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 226px;
+		top: 40px;
+	}
+	.Ellipse_170 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 277px;
+		top: 40px;
+	}
+	.Ellipse_171 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 327px;
+		top: 40px;
+	}
+	#Size {
+		position: absolute;
+		left: 24px;
+		top: 113px;
+		overflow: visible;
+		width: 29px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(85,139,47,1);
+	}
+	.Ellipse_173 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 187px;
+		top: 216px;
+	}
+	.Ellipse_174 {
+		position: absolute;
+		overflow: visible;
+		width: 35px;
+		height: 35px;
+		left: 318px;
+		top: 205px;
+	}
+	.Ellipse_175 {
+		position: absolute;
+		overflow: visible;
+		width: 29px;
+		height: 29px;
+		left: 250px;
+		top: 211px;
+	}
+	.Path_183 {
+		overflow: visible;
+		position: absolute;
+		top: 222px;
+		left: 130px;
+		width: 18px;
+		height: 18px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_182 {
+		overflow: visible;
+		position: absolute;
+		top: 228px;
+		left: 44px;
+		width: 12px;
+		height: 12px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Ellipse_178 {
+		position: absolute;
+		overflow: visible;
+		width: 15px;
+		height: 15px;
+		left: 85px;
+		top: 225px;
+	}
+	#Price_Range {
+		position: absolute;
+		width: 327px;
+		height: 16px;
+		left: 24px;
+		top: 272px;
+		overflow: visible;
+	}
+	.Rectangle_583 {
+		position: absolute;
+		overflow: visible;
+		width: 327px;
+		height: 4px;
+		left: 0px;
+		top: 6px;
+	}
+	.Ellipse_173_A1_Ellipse_13 {
+		position: absolute;
+		overflow: visible;
+		width: 16px;
+		height: 16px;
+		left: 195px;
+		top: 0px;
+	}
+	.line_A1_Rectangle_14 {
+		position: absolute;
+		overflow: visible;
+		width: 375px;
+		height: 1px;
+		left: 0px;
+		top: 314px;
+	}
+	.line_A1_Rectangle_15 {
+		position: absolute;
+		overflow: visible;
+		width: 375px;
+		height: 1px;
+		left: 0px;
+		top: 154px;
+	}
+	#ID25454_A1_Group_10 {
+		position: absolute;
+		width: 37px;
+		height: 24.667px;
+		left: 48px;
+		top: 346.775px;
+		overflow: visible;
+	}
+	.Path_181_A1_Path_18 {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 37px;
+		height: 24.667px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Ellipse_179 {
+		position: absolute;
+		overflow: visible;
+		width: 31px;
+		height: 20px;
+		left: 133px;
+		top: 352px;
+	}
+	.Rectangle_1469 {
+		position: absolute;
+		overflow: visible;
+		width: 34px;
+		height: 20px;
+		left: 205px;
+		top: 352px;
+	}
+	.eye_dropper {
+		position: absolute;
+		overflow: visible;
+		width: 39px;
+		height: 39px;
+		left: 287px;
+		top: 347px;
+	}
+	#ID25454_A1_Group_10 {
+		position: absolute;
+		width: 37px;
+		height: 24.667px;
+		left: 48px;
+		top: 346.775px;
+		overflow: visible;
+	}
+	.Path_181_A1_Path_18 {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 37px;
+		height: 24.667px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+</style>
+</head>
+<body>
+<div id="Pen">
+	<div id="Navigation_Bar_6" class="Navigation Bar 6">
+		<svg class="Rectangle_192">
+			<rect fill="rgba(51,105,30,1)" id="Rectangle_192" rx="0" ry="0" x="0" y="0" width="375" height="56">
+			</rect>
+		</svg>
+		<div id="Profile" class="Profile">
+			<svg class="Union_1" viewBox="0 354 16 16">
+				<path fill="rgba(255,255,255,1)" id="Union_1" d="M 0 369.9999084472656 L 0 368.0001220703125 C 0 365.7996215820313 3.600000143051147 363.9996032714844 8.000100135803223 363.9996032714844 C 12.40019989013672 363.9996032714844 16.00020027160645 365.7996215820313 16.00020027160645 368.0001220703125 L 16.00020027160645 369.9999084472656 L 0 369.9999084472656 Z M 3.999600172042847 358.0002136230469 C 3.999600172042847 355.7907104492188 5.790600299835205 353.9996948242188 8.000100135803223 353.9996948242188 C 10.20870018005371 353.9996948242188 11.99970054626465 355.7907104492188 11.99970054626465 358.0002136230469 C 11.99970054626465 360.2088012695313 10.20870018005371 361.9998168945313 8.000100135803223 361.9998168945313 C 5.790600299835205 361.9998168945313 3.999600172042847 360.2088012695313 3.999600172042847 358.0002136230469 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="Settings" class="Settings">
+			<svg class="Rectangle_193">
+				<rect fill="transparent" id="Rectangle_193" rx="0" ry="0" x="0" y="0" width="16" height="16">
+				</rect>
+			</svg>
+			<svg class="Path_104" viewBox="260 0 15.2 16">
+				<path fill="rgba(255,255,255,1)" id="Path_104" d="M 267.5 10 C 268.6000061035156 10 269.5 9.100000381469727 269.5 8 C 269.5 6.899999618530273 268.6000061035156 6 267.5 6 C 266.3999938964844 6 265.5 6.900000095367432 265.5 8 C 265.5 9.100000381469727 266.3999938964844 10 267.5 10 Z M 263.3999938964844 3.599999904632568 C 264.1000061035156 3 264.8999938964844 2.5 265.7999877929688 2.299999952316284 L 266.5999755859375 0 L 268.5999755859375 0 L 269.3999633789063 2.299999952316284 C 270.2999572753906 2.599999904632568 271.0999755859375 3 271.7999572753906 3.599999904632568 L 274.199951171875 3.099999904632568 L 275.199951171875 4.899999618530273 L 273.5999450683594 6.699999809265137 C 273.699951171875 7.099999904632568 273.699951171875 7.599999904632568 273.699951171875 8 C 273.699951171875 8.399999618530273 273.5999450683594 8.899999618530273 273.5999450683594 9.300000190734863 L 275.199951171875 11.10000038146973 L 274.199951171875 12.90000057220459 L 271.7999572753906 12.40000057220459 C 271.0999450683594 13.00000095367432 270.2999572753906 13.50000095367432 269.3999633789063 13.70000076293945 L 268.5999755859375 16 L 266.5999755859375 16 L 265.7999877929688 13.69999980926514 C 264.8999938964844 13.39999961853027 264.0999755859375 13 263.3999938964844 12.39999961853027 L 261 12.89999961853027 L 260 11.09999942779541 L 261.6000061035156 9.299999237060547 C 261.5 8.899999618530273 261.5 8.399999618530273 261.5 7.999999046325684 C 261.5 7.599998474121094 261.6000061035156 7.099998950958252 261.6000061035156 6.69999885559082 L 260 4.900000095367432 L 261 3.100000143051147 L 263.3999938964844 3.599999904632568 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="Compose" class="Compose">
+			<svg class="Rectangle_324">
+				<rect fill="transparent" id="Rectangle_324" rx="0" ry="0" x="0" y="0" width="16" height="16">
+				</rect>
+			</svg>
+			<svg class="Path_110" viewBox="0 0 16 16">
+				<path fill="rgba(249,249,249,0.988)" id="Path_110" d="M 8.153846740722656 3.076923131942749 L 2.461538553237915 8.923077583312988 L 0 16 L 7.07692289352417 13.692307472229 L 12.76923084259033 8 L 8.153846740722656 3.076923131942749 Z M 15.38461589813232 2.615384817123413 L 13.38461494445801 0.6153846383094788 C 12.92307662963867 0.1538461595773697 12.46153926849365 0 12.00000095367432 0 C 11.53846168518066 0 11.07692337036133 0.1538461595773697 10.61538505554199 0.6153846383094788 L 8.923077583312988 2.307692289352417 L 13.53846168518066 7.07692289352417 L 15.38461589813232 5.230769634246826 C 15.692307472229 4.92307710647583 16 4.461538791656494 16 3.846153974533081 C 16 3.384615421295166 15.692307472229 2.923076868057251 15.38461589813232 2.615384817123413 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="Folder" class="Folder">
+			<svg class="Path_178" viewBox="0 0 16 12.013">
+				<path fill="rgba(249,249,249,0.49)" id="Path_178" d="M -2.874140037079087e-08 10.92556571960449 L -2.874140037079087e-08 0.9838187098503113 C -2.874140037079087e-08 0.7249190211296082 0.1035598367452621 0.466019332408905 0.3106795847415924 0.2588996291160583 C 0.466019332408905 0.1035598367452621 0.7249190211296082 -2.874140037079087e-08 0.9838187098503113 -2.874140037079087e-08 L 6.731390953063965 -2.874140037079087e-08 C 6.886731147766113 -2.874140037079087e-08 7.042070865631104 0.05177990347146988 7.145630836486816 0.155339777469635 C 7.300970554351807 0.2588996291160583 7.40453052520752 0.3624595105648041 7.456310272216797 0.5177993178367615 L 7.974109649658203 1.967637419700623 L 14.96440124511719 1.967637419700623 C 15.22330093383789 1.967637419700623 15.48220062255859 2.071197271347046 15.6893196105957 2.278316974639893 C 15.89643955230713 2.485436916351318 16 2.692556619644165 16 3.003236055374146 L 16 10.97734546661377 C 16 11.23624515533447 15.89643955230713 11.49514484405518 15.6893196105957 11.7022647857666 C 15.48220062255859 11.90938472747803 15.27508068084717 12.01294422149658 14.96440124511719 12.01294422149658 L 0.9838187098503113 12.01294422149658 C 0.7249190211296082 12.01294422149658 0.466019332408905 11.90938472747803 0.2588996291160583 11.7022647857666 C 0.1035598367452621 11.4433650970459 -2.874140037079087e-08 11.23624515533447 -2.874140037079087e-08 10.92556571960449 Z">
+				</path>
+			</svg>
+			<svg class="Rectangle_1447">
+				<rect fill="transparent" id="Rectangle_1447" rx="0" ry="0" x="0" y="0" width="16" height="16">
+				</rect>
+			</svg>
+		</div>
+		<div id="Photos" class="Photos">
+			<svg class="Rectangle_549">
+				<rect fill="transparent" id="Rectangle_549" rx="0" ry="0" x="0" y="0" width="16" height="16">
+				</rect>
+			</svg>
+			<svg class="Path_148" viewBox="0 0 16 12">
+				<path fill="rgba(255,255,255,0.502)" id="Path_148" d="M 14.93333339691162 0 C 15.19999980926514 0 15.46666622161865 0.1333333402872086 15.60000038146973 0.2666666805744171 C 15.86666679382324 0.5333333611488342 16 0.6666666865348816 16 1.066666722297668 L 16 11.0666675567627 C 16 11.33333396911621 15.86666679382324 11.60000038146973 15.73333358764648 11.73333358764648 C 15.46666717529297 11.86666679382324 15.33333396911621 12 14.93333339691162 12 L 1.066666722297668 12 C 0.6666666865348816 12 0.5333333611488342 11.86666679382324 0.2666666805744171 11.73333358764648 C 0.1333333402872086 11.46666717529297 0 11.33333396911621 0 10.93333339691162 L 0 1.066666722297668 C 0 0.8000000715255737 0.1333333402872086 0.5333333611488342 0.2666666805744171 0.4000000357627869 C 0.5333333611488342 0.1333333402872086 0.6666666865348816 0 1.066666722297668 0 L 14.93333339691162 0 Z M 4.533333778381348 2.400000095367432 C 4.266666889190674 2.133333444595337 3.866666793823242 2 3.466666698455811 2 C 3.0666663646698 2 2.666666746139526 2.133333444595337 2.400000095367432 2.400000095367432 C 2.133333444595337 2.666666746139526 2 3.066666603088379 2 3.466666698455811 C 2 3.866666555404663 2.133333444595337 4.266666412353516 2.400000095367432 4.533333301544189 C 2.666666507720947 4.800000190734863 3.066666603088379 4.933333396911621 3.466666698455811 4.933333396911621 C 3.866666555404663 4.933333396911621 4.266666412353516 4.800000190734863 4.533333301544189 4.533333301544189 C 4.800000190734863 4.266666412353516 4.933333396911621 3.866666555404663 4.933333396911621 3.466666698455811 C 4.933333396911621 3.066666603088379 4.800000190734863 2.666666746139526 4.533333778381348 2.400000095367432 Z M 14 10 L 10 4 L 6.40000057220459 8.666666984558105 L 4 6.933333396911621 L 2 10 L 14 10 Z">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<div id="Color">
+		<div id="COLOR">
+			<span>COLOR</span>
+		</div>
+		<svg class="line">
+			<rect fill="rgba(241,249,255,1)" id="line" rx="0" ry="0" x="0" y="0" width="375" height="1">
+			</rect>
+		</svg>
+		<svg class="Path_180" viewBox="0 0 24 24">
+			<path fill="rgba(251,38,45,1)" id="Path_180" d="M 12 0 C 18.62741661071777 0 24 5.372583389282227 24 12 C 24 18.62741661071777 18.62741661071777 24 12 24 C 5.372583389282227 24 0 18.62741661071777 0 12 C 0 5.372583389282227 5.372583389282227 0 12 0 Z">
+			</path>
+		</svg>
+		<svg class="Ellipse_166">
+			<ellipse fill="rgba(252,169,3,1)" id="Ellipse_166" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_167">
+			<ellipse fill="rgba(251,230,38,1)" id="Ellipse_167" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_168">
+			<ellipse fill="rgba(4,128,13,1)" id="Ellipse_168" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_169">
+			<ellipse fill="rgba(156,204,101,1)" id="Ellipse_169" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_170">
+			<ellipse fill="rgba(0,2,4,1)" id="Ellipse_170" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_171">
+			<ellipse fill="rgba(38,153,251,1)" id="Ellipse_171" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<div id="Size">
+			<span>Size</span>
+		</div>
+	</div>
+	<svg class="Ellipse_173">
+		<ellipse fill="rgba(156,204,101,1)" id="Ellipse_173" rx="12" ry="12" cx="12" cy="12">
+		</ellipse>
+	</svg>
+	<svg class="Ellipse_174">
+		<ellipse fill="rgba(156,204,101,1)" id="Ellipse_174" rx="17.5" ry="17.5" cx="17.5" cy="17.5">
+		</ellipse>
+	</svg>
+	<svg class="Ellipse_175">
+		<ellipse fill="rgba(156,204,101,1)" id="Ellipse_175" rx="14.5" ry="14.5" cx="14.5" cy="14.5">
+		</ellipse>
+	</svg>
+	<svg class="Path_183" viewBox="0 0 18 18">
+		<path fill="rgba(156,204,101,1)" id="Path_183" d="M 9 0 C 13.97056198120117 0 18 4.02943754196167 18 9 C 18 13.97056198120117 13.97056198120117 18 9 18 C 4.02943754196167 18 0 13.97056198120117 0 9 C 0 4.02943754196167 4.02943754196167 0 9 0 Z">
+		</path>
+	</svg>
+	<svg class="Path_182" viewBox="0 0 12 12">
+		<path fill="rgba(156,204,101,1)" id="Path_182" d="M 6 0 C 9.313708305358887 0 12 2.686291694641113 12 6 C 12 9.313708305358887 9.313708305358887 12 6 12 C 2.686291694641113 12 0 9.313708305358887 0 6 C 0 2.686291694641113 2.686291694641113 0 6 0 Z">
+		</path>
+	</svg>
+	<svg class="Ellipse_178">
+		<ellipse fill="rgba(156,204,101,1)" id="Ellipse_178" rx="7.5" ry="7.5" cx="7.5" cy="7.5">
+		</ellipse>
+	</svg>
+	<div id="Price_Range">
+		<svg class="Rectangle_583">
+			<rect fill="rgba(156,204,101,1)" id="Rectangle_583" rx="0" ry="0" x="0" y="0" width="327" height="4">
+			</rect>
+		</svg>
+		<svg class="Ellipse_173_A1_Ellipse_13">
+			<ellipse fill="rgba(255,255,255,1)" stroke="rgba(85,139,47,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Ellipse_173_A1_Ellipse_13" rx="8" ry="8" cx="8" cy="8">
+			</ellipse>
+		</svg>
+	</div>
+	<svg class="line_A1_Rectangle_14">
+		<rect fill="rgba(241,249,255,1)" id="line_A1_Rectangle_14" rx="0" ry="0" x="0" y="0" width="375" height="1">
+		</rect>
+	</svg>
+	<svg class="line_A1_Rectangle_15">
+		<rect fill="rgba(241,249,255,1)" id="line_A1_Rectangle_15" rx="0" ry="0" x="0" y="0" width="375" height="1">
+		</rect>
+	</svg>
+	<div id="ID25454_A1_Group_10">
+		<svg class="Path_181_A1_Path_18" viewBox="0 91.358 37 24.667">
+			<path fill="rgba(85,139,47,1)" id="Path_181_A1_Path_18" d="M 36.78835678100586 92.80295562744141 C 36.58275604248047 92.36616516113281 36.27739334106445 92.01612091064453 35.87273788452148 91.75300598144531 C 35.46801376342773 91.48976135253906 35.02130508422852 91.35800170898438 34.53315353393555 91.35800170898438 L 19.73299598693848 91.35800170898438 C 18.98780632019043 91.35800170898438 18.3712043762207 91.64041900634766 17.88298416137695 92.20578765869141 L 0.6158711314201355 111.9398498535156 C 0.2947110831737518 112.2994842529297 0.09876163303852081 112.7201385498047 0.02809019945561886 113.2019500732422 C -0.04271620884537697 113.6838226318359 0.01837035082280636 114.142951965332 0.2111473679542542 114.580078125 C 0.4166141450405121 115.0166549682617 0.7217094898223877 115.3665771484375 1.126500725746155 115.6298828125 C 1.531291961669922 115.8929901123047 1.977797627449036 116.0249557495117 2.466017484664917 116.0249557495117 L 17.26638221740723 116.0249557495117 C 18.01170349121094 116.0249557495117 18.6283073425293 115.7428741455078 19.11652755737305 115.1771697998047 L 36.38363647460938 95.44297027587891 C 36.70425796508789 95.08320617675781 36.90034484863281 94.66261291503906 36.97080993652344 94.18080902099609 C 37.0422248840332 93.69893646240234 36.98073196411133 93.23987579345703 36.78835678100586 92.80295562744141 Z M 17.2665843963623 113.5581359863281 L 2.466017484664917 113.5581359863281 L 8.941191673278809 106.1580963134766 L 23.74168968200684 106.1580963134766 L 17.2665843963623 113.5581359863281 Z">
+			</path>
+		</svg>
+	</div>
+	<svg class="Ellipse_179">
+		<ellipse fill="rgba(255,255,255,1)" stroke="rgba(85,139,47,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Ellipse_179" rx="15.5" ry="10" cx="15.5" cy="10">
+		</ellipse>
+	</svg>
+	<svg class="Rectangle_1469">
+		<rect fill="rgba(255,255,255,1)" stroke="rgba(85,139,47,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_1469" rx="0" ry="0" x="0" y="0" width="34" height="20">
+		</rect>
+	</svg>
+	<svg class="eye_dropper">
+		<pattern elementId="eye_dropper_A1_Rectangle_18" id="eye_dropper_A1_Rectangle_18_pattern" x="0" y="0" width="100%" height="100%">
+			<image x="0" y="0" width="100%" height="100%" href="eye_dropper_A1_Rectangle_18_pattern.png" xlink:href="eye_dropper_A1_Rectangle_18_pattern.png"></image>
+		</pattern>
+		<rect fill="url(#eye_dropper_A1_Rectangle_18_pattern)" id="eye_dropper" rx="0" ry="0" x="0" y="0" width="39" height="39">
+		</rect>
+	</svg>
+	<div id="ID25454_A1_Group_10">
+		<svg class="Path_181_A1_Path_18" viewBox="0 91.358 37 24.667">
+			<path fill="rgba(85,139,47,1)" id="Path_181_A1_Path_18" d="M 36.78835678100586 92.80295562744141 C 36.58275604248047 92.36616516113281 36.27739334106445 92.01612091064453 35.87273788452148 91.75300598144531 C 35.46801376342773 91.48976135253906 35.02130508422852 91.35800170898438 34.53315353393555 91.35800170898438 L 19.73299598693848 91.35800170898438 C 18.98780632019043 91.35800170898438 18.3712043762207 91.64041900634766 17.88298416137695 92.20578765869141 L 0.6158711314201355 111.9398498535156 C 0.2947110831737518 112.2994842529297 0.09876163303852081 112.7201385498047 0.02809019945561886 113.2019500732422 C -0.04271620884537697 113.6838226318359 0.01837035082280636 114.142951965332 0.2111473679542542 114.580078125 C 0.4166141450405121 115.0166549682617 0.7217094898223877 115.3665771484375 1.126500725746155 115.6298828125 C 1.531291961669922 115.8929901123047 1.977797627449036 116.0249557495117 2.466017484664917 116.0249557495117 L 17.26638221740723 116.0249557495117 C 18.01170349121094 116.0249557495117 18.6283073425293 115.7428741455078 19.11652755737305 115.1771697998047 L 36.38363647460938 95.44297027587891 C 36.70425796508789 95.08320617675781 36.90034484863281 94.66261291503906 36.97080993652344 94.18080902099609 C 37.0422248840332 93.69893646240234 36.98073196411133 93.23987579345703 36.78835678100586 92.80295562744141 Z M 17.2665843963623 113.5581359863281 L 2.466017484664917 113.5581359863281 L 8.941191673278809 106.1580963134766 L 23.74168968200684 106.1580963134766 L 17.2665843963623 113.5581359863281 Z">
+			</path>
+		</svg>
+	</div>
+</div>
+</body>
+</html>

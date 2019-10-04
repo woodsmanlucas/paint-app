@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Files</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Files;
+		--web-view-id: Files;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Files;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	#Files {
+		position: absolute;
+		box-sizing: border-box;
+		background: #E5E5E5;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		--web-view-name: Files;
+		--web-view-id: Files;
+		--web-enable-deep-linking: true;
+	}
+	#Navigation_Bar {
+		position: absolute;
+		width: 220px;
+		height: 1080px;
+		left: -10px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Base {
+		position: absolute;
+		overflow: visible;
+		width: 220px;
+		height: 1080px;
+		left: 0px;
+		top: 0px;
+	}
+	#FEED {
+		position: absolute;
+		left: 40px;
+		top: 93px;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		line-height: 12px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+	}
+	#AUTHORS {
+		position: absolute;
+		left: 41px;
+		top: 134px;
+		overflow: visible;
+		width: 50px;
+		white-space: nowrap;
+		line-height: 12px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+	}
+	#EXPLORE {
+		position: absolute;
+		left: 40px;
+		top: 210px;
+		overflow: visible;
+		width: 48px;
+		white-space: nowrap;
+		line-height: 12px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+	}
+	#BLOG {
+		position: absolute;
+		left: 40px;
+		top: 260px;
+		overflow: visible;
+		width: 29px;
+		white-space: nowrap;
+		line-height: 12px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+	}
+	#CONTACT {
+		position: absolute;
+		left: 40px;
+		top: 309px;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		line-height: 12px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+	}
+	#Logo {
+		position: absolute;
+		width: 19px;
+		height: 10.149px;
+		left: 40.482px;
+		top: 41.341px;
+		overflow: visible;
+	}
+	.Path_197 {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 19px;
+		height: 10.149px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#social {
+		position: absolute;
+		width: 88px;
+		height: 16px;
+		left: 40px;
+		top: 1024px;
+		overflow: visible;
+	}
+	#Symbol_13___4 {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Path_3 {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 16px;
+		height: 16px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Symbol_12___4 {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 36px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Rectangle_393 {
+		position: absolute;
+		overflow: visible;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+	}
+	.Path_2 {
+		overflow: visible;
+		position: absolute;
+		top: 1.999px;
+		left: 0px;
+		width: 16px;
+		height: 12.978px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Symbol_11___4 {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 72px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Rectangle_392 {
+		position: absolute;
+		overflow: visible;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+	}
+	.Path_1 {
+		overflow: visible;
+		position: absolute;
+		top: 0.001px;
+		left: 4px;
+		width: 8.355px;
+		height: 16px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Rectangle_394 {
+		opacity: 0.5;
+	}
+	.Rectangle_394 {
+		position: absolute;
+		overflow: visible;
+		width: 1710px;
+		height: 978px;
+		left: 210px;
+		top: 102px;
+	}
+	#Color_A1_Group_11 {
+		position: absolute;
+		width: 375px;
+		height: 89px;
+		left: 585px;
+		top: 13px;
+		overflow: visible;
+	}
+	#COLOR_A1_Text_27 {
+		position: absolute;
+		left: 24px;
+		top: 0px;
+		overflow: visible;
+		width: 52px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(85,139,47,1);
+	}
+	.line_A1_Path_30 {
+		overflow: visible;
+		position: absolute;
+		top: 89px;
+		left: 0px;
+		width: 375px;
+		height: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_180_A1_Path_31 {
+		overflow: visible;
+		position: absolute;
+		top: 40px;
+		left: 24px;
+		width: 24px;
+		height: 24px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Ellipse_166_A1_Ellipse_34 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 75px;
+		top: 40px;
+	}
+	.Ellipse_167_A1_Ellipse_35 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 125px;
+		top: 40px;
+	}
+	.Ellipse_168_A1_Ellipse_36 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 176px;
+		top: 40px;
+	}
+	.Ellipse_169_A1_Ellipse_37 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 226px;
+		top: 40px;
+	}
+	.Ellipse_170_A1_Ellipse_38 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 277px;
+		top: 40px;
+	}
+	.Ellipse_171_A1_Ellipse_39 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 327px;
+		top: 40px;
+	}
+	.Ellipse_172 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 1123px;
+		top: 49px;
+	}
+	.Ellipse_173 {
+		position: absolute;
+		overflow: visible;
+		width: 35px;
+		height: 35px;
+		left: 1254px;
+		top: 38px;
+	}
+	.Ellipse_174 {
+		position: absolute;
+		overflow: visible;
+		width: 29px;
+		height: 29px;
+		left: 1186px;
+		top: 44px;
+	}
+	.Path_198 {
+		overflow: visible;
+		position: absolute;
+		top: 55px;
+		left: 1066px;
+		width: 18px;
+		height: 18px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_199 {
+		overflow: visible;
+		position: absolute;
+		top: 61px;
+		left: 980px;
+		width: 12px;
+		height: 12px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Ellipse_175 {
+		position: absolute;
+		overflow: visible;
+		width: 15px;
+		height: 15px;
+		left: 1021px;
+		top: 58px;
+	}
+	#Size_A1_Text_28 {
+		position: absolute;
+		left: 972px;
+		top: 16px;
+		overflow: visible;
+		width: 29px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(85,139,47,1);
+	}
+	.eye_dropper_A1_Rectangle_26 {
+		position: absolute;
+		overflow: visible;
+		width: 39px;
+		height: 39px;
+		left: 1328px;
+		top: 42px;
+	}
+	.Rectangle_395 {
+		position: absolute;
+		overflow: visible;
+		width: 34px;
+		height: 20px;
+		left: 1406px;
+		top: 54px;
+	}
+	.Ellipse_176 {
+		position: absolute;
+		overflow: visible;
+		width: 31px;
+		height: 20px;
+		left: 1479px;
+		top: 54px;
+	}
+	#ID25454_A1_Group_12 {
+		position: absolute;
+		width: 37px;
+		height: 24.667px;
+		left: 509px;
+		top: 51.775px;
+		overflow: visible;
+	}
+	.Path_181_A1_Path_34 {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 37px;
+		height: 24.667px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Navigation_Bar_A1_Component_15 {
+		position: absolute;
+		width: 220px;
+		height: 1080px;
+		left: -16px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Base_A1_Rectangle_22 {
+		position: absolute;
+		overflow: visible;
+		width: 220px;
+		height: 1080px;
+		left: 0px;
+		top: 0px;
+	}
+	#FILES {
+		position: absolute;
+		left: 40px;
+		top: 93px;
+		overflow: visible;
+		width: 29px;
+		white-space: nowrap;
+		line-height: 12px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+	}
+	#MY_PROFILE {
+		position: absolute;
+		left: 41px;
+		top: 134px;
+		overflow: visible;
+		width: 61px;
+		white-space: nowrap;
+		line-height: 12px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+	}
+	#USER_PlANS {
+		position: absolute;
+		left: 40px;
+		top: 210px;
+		overflow: visible;
+		width: 61px;
+		white-space: nowrap;
+		line-height: 12px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+	}
+	#BLOG_A1_Text_25 {
+		position: absolute;
+		left: 40px;
+		top: 260px;
+		overflow: visible;
+		width: 29px;
+		white-space: nowrap;
+		line-height: 12px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+	}
+	#CONTACT_A1_Text_26 {
+		position: absolute;
+		left: 40px;
+		top: 309px;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		line-height: 12px;
+		margin-top: -1px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(255,255,255,1);
+	}
+	#social_A1_Group_10 {
+		position: absolute;
+		width: 88px;
+		height: 16px;
+		left: 40px;
+		top: 1024px;
+		overflow: visible;
+	}
+	#Symbol_13___4_A1_Component_16 {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Path_3_A1_Path_27 {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 16px;
+		height: 16px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Symbol_12___4_A1_Component_17 {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 36px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Rectangle_393_A1_Rectangle_23 {
+		position: absolute;
+		overflow: visible;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+	}
+	.Path_2_A1_Path_28 {
+		overflow: visible;
+		position: absolute;
+		top: 1.999px;
+		left: 0px;
+		width: 16px;
+		height: 12.978px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Symbol_11___4_A1_Component_18 {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: 72px;
+		top: 0px;
+		overflow: visible;
+	}
+	.Rectangle_392_A1_Rectangle_24 {
+		position: absolute;
+		overflow: visible;
+		width: 16px;
+		height: 16px;
+		left: 0px;
+		top: 0px;
+	}
+	.Path_1_A1_Path_29 {
+		overflow: visible;
+		position: absolute;
+		top: 0.001px;
+		left: 4px;
+		width: 8.355px;
+		height: 16px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Rectangle_396 {
+		opacity: 0.5;
+	}
+	.Rectangle_396 {
+		position: absolute;
+		overflow: visible;
+		width: 1425px;
+		height: 978px;
+		left: 495px;
+		top: 102px;
+	}
+	#Color_A1_Group_11 {
+		position: absolute;
+		width: 375px;
+		height: 89px;
+		left: 585px;
+		top: 13px;
+		overflow: visible;
+	}
+	#COLOR_A1_Text_27 {
+		position: absolute;
+		left: 24px;
+		top: 0px;
+		overflow: visible;
+		width: 52px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(85,139,47,1);
+	}
+	.line_A1_Path_30 {
+		overflow: visible;
+		position: absolute;
+		top: 89px;
+		left: 0px;
+		width: 375px;
+		height: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_180_A1_Path_31 {
+		overflow: visible;
+		position: absolute;
+		top: 40px;
+		left: 24px;
+		width: 24px;
+		height: 24px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Ellipse_166_A1_Ellipse_34 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 75px;
+		top: 40px;
+	}
+	.Ellipse_167_A1_Ellipse_35 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 125px;
+		top: 40px;
+	}
+	.Ellipse_168_A1_Ellipse_36 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 176px;
+		top: 40px;
+	}
+	.Ellipse_169_A1_Ellipse_37 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 226px;
+		top: 40px;
+	}
+	.Ellipse_170_A1_Ellipse_38 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 277px;
+		top: 40px;
+	}
+	.Ellipse_171_A1_Ellipse_39 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 327px;
+		top: 40px;
+	}
+	.Ellipse_177 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 1123px;
+		top: 49px;
+	}
+	.Ellipse_178 {
+		position: absolute;
+		overflow: visible;
+		width: 35px;
+		height: 35px;
+		left: 1254px;
+		top: 38px;
+	}
+	.Ellipse_179 {
+		position: absolute;
+		overflow: visible;
+		width: 29px;
+		height: 29px;
+		left: 1186px;
+		top: 44px;
+	}
+	.Path_200 {
+		overflow: visible;
+		position: absolute;
+		top: 55px;
+		left: 1066px;
+		width: 18px;
+		height: 18px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Path_201 {
+		overflow: visible;
+		position: absolute;
+		top: 61px;
+		left: 980px;
+		width: 12px;
+		height: 12px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Ellipse_180 {
+		position: absolute;
+		overflow: visible;
+		width: 15px;
+		height: 15px;
+		left: 1021px;
+		top: 58px;
+	}
+	#Size_A1_Text_28 {
+		position: absolute;
+		left: 972px;
+		top: 16px;
+		overflow: visible;
+		width: 29px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(85,139,47,1);
+	}
+	.eye_dropper_A1_Rectangle_26 {
+		position: absolute;
+		overflow: visible;
+		width: 39px;
+		height: 39px;
+		left: 1328px;
+		top: 42px;
+	}
+	.Rectangle_397 {
+		position: absolute;
+		overflow: visible;
+		width: 34px;
+		height: 20px;
+		left: 1406px;
+		top: 54px;
+	}
+	.Ellipse_181 {
+		position: absolute;
+		overflow: visible;
+		width: 31px;
+		height: 20px;
+		left: 1479px;
+		top: 54px;
+	}
+	#ID25454_A1_Group_12 {
+		position: absolute;
+		width: 37px;
+		height: 24.667px;
+		left: 509px;
+		top: 51.775px;
+		overflow: visible;
+	}
+	.Path_181_A1_Path_34 {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 37px;
+		height: 24.667px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#FILES_A1_Text_29 {
+		position: absolute;
+		left: 216px;
+		top: 77px;
+		overflow: visible;
+		width: 58px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(85,139,47,1);
+	}
+	#Notebook_1 {
+		position: absolute;
+		left: 224px;
+		top: 135px;
+		overflow: visible;
+		width: 77px;
+		white-space: nowrap;
+		line-height: 48px;
+		margin-top: -17px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Notebook_2 {
+		position: absolute;
+		left: 224px;
+		top: 330px;
+		overflow: visible;
+		width: 77px;
+		white-space: nowrap;
+		line-height: 48px;
+		margin-top: -17px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Notebook_3 {
+		position: absolute;
+		left: 224px;
+		top: 544px;
+		overflow: visible;
+		width: 77px;
+		white-space: nowrap;
+		line-height: 48px;
+		margin-top: -17px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Notebook_4 {
+		position: absolute;
+		left: 224px;
+		top: 713px;
+		overflow: visible;
+		width: 77px;
+		white-space: nowrap;
+		line-height: 48px;
+		margin-top: -17px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Note {
+		position: absolute;
+		left: 239px;
+		top: 172px;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		line-height: 48px;
+		margin-top: -17px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Note_A1_Text_35 {
+		position: absolute;
+		left: 239px;
+		top: 224px;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		line-height: 48px;
+		margin-top: -17px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Note_A1_Text_36 {
+		position: absolute;
+		left: 239px;
+		top: 276px;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		line-height: 48px;
+		margin-top: -17px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Note_A1_Text_37 {
+		position: absolute;
+		left: 247px;
+		top: 384px;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		line-height: 48px;
+		margin-top: -17px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Note_A1_Text_38 {
+		position: absolute;
+		left: 247px;
+		top: 436px;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		line-height: 48px;
+		margin-top: -17px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Note_A1_Text_39 {
+		position: absolute;
+		left: 247px;
+		top: 495px;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		line-height: 48px;
+		margin-top: -17px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Note_A1_Text_40 {
+		position: absolute;
+		left: 247px;
+		top: 596px;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		line-height: 48px;
+		margin-top: -17px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Note_A1_Text_41 {
+		position: absolute;
+		left: 247px;
+		top: 655px;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		line-height: 48px;
+		margin-top: -17px;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Symbol_71___4 {
+		position: absolute;
+		width: 15.556px;
+		height: 15.557px;
+		left: 461px;
+		top: 119px;
+		overflow: visible;
+	}
+	.Union_3 {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 15.556px;
+		height: 15.557px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+</style>
+</head>
+<body>
+<div id="Files">
+	<div id="Navigation_Bar" class="Navigation Bar">
+		<svg class="Base">
+			<rect fill="rgba(51,105,30,1)" id="Base" rx="0" ry="0" x="0" y="0" width="220" height="1080">
+			</rect>
+		</svg>
+		<div id="FEED">
+			<span>FEED</span>
+		</div>
+		<div id="AUTHORS">
+			<span>AUTHORS</span>
+		</div>
+		<div id="EXPLORE">
+			<span>EXPLORE</span>
+		</div>
+		<div id="BLOG">
+			<span>BLOG</span>
+		</div>
+		<div id="CONTACT">
+			<span>CONTACT</span>
+		</div>
+		<div id="Logo" class="Logo">
+			<svg class="Path_197" viewBox="0 0 19 10.149">
+				<path fill="rgba(255,255,255,1)" id="Path_197" d="M 0 10.14906787872314 L 3.422359943389893 4.838509559631348 L 0.3540372252464294 0 L 2.714285373687744 0 L 4.720496654510498 3.30434775352478 L 6.726707458496094 0 L 9.086956024169922 0 L 6.018633365631104 4.956521511077881 L 9.440993309020996 10.14906787872314 L 6.962733268737793 10.14906787872314 L 4.720496654510498 6.608695507049561 L 2.478260517120361 10.14906787872314 L 0 10.14906787872314 Z M 10.5031042098999 0 L 14.16149139404297 0 C 14.98757648468018 0 15.69565200805664 0.1180124208331108 16.04969024658203 0.2360248416662216 C 16.75776290893555 0.3540372550487518 17.22981262207031 0.7080745100975037 17.70186233520508 1.180124282836914 C 18.17391204833984 1.65217387676239 18.40993881225586 2.124223709106445 18.64596176147461 2.832298040390015 C 18.88198661804199 3.540372848510742 19 4.248447418212891 19 5.192546844482422 C 19 6.018633365631104 18.88198661804199 6.726707935333252 18.64596176147461 7.316769123077393 C 18.40993881225586 8.024845123291016 18.05590057373047 8.614907264709473 17.58384895324707 9.086956024169922 C 17.22981262207031 9.440994262695313 16.75776290893555 9.677018165588379 16.16770362854004 9.913043022155762 C 15.69565296173096 10.03105640411377 15.1055908203125 10.14906692504883 14.39751434326172 10.14906692504883 L 10.5031042098999 10.14906692504883 L 10.5031042098999 0 Z M 12.50931644439697 1.770186424255371 L 12.50931644439697 8.496894836425781 L 14.04347896575928 8.496894836425781 C 14.6335391998291 8.496894836425781 14.98757839202881 8.496894836425781 15.22360229492188 8.37888240814209 C 15.57763957977295 8.260869979858398 15.81366443634033 8.142857551574707 16.04969024658203 7.906832218170166 C 16.28571319580078 7.670807361602783 16.40372657775879 7.4347825050354 16.63975143432617 6.962732791900635 C 16.87577629089355 6.490683078765869 16.87577629089355 5.900620460510254 16.87577629089355 5.074533462524414 C 16.87577629089355 4.248447418212891 16.75776290893555 3.658384561538696 16.63975143432617 3.30434775352478 C 16.52173805236816 2.950310230255127 16.28571319580078 2.596273183822632 16.04969024658203 2.360248327255249 C 15.81366443634033 2.124223470687866 15.45962715148926 2.006211280822754 15.10558891296387 1.888198494911194 C 14.86956596374512 1.770186305046082 14.27950382232666 1.770186305046082 13.45341682434082 1.770186305046082 L 12.50931644439697 1.770186305046082 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="social">
+			<div id="Symbol_13___4" class="Symbol 13 – 4">
+				<svg class="Path_3" viewBox="0 0 16 16">
+					<path fill="rgba(255,255,255,1)" id="Path_3" d="M 8 1.422222256660461 C 10.13333320617676 1.422222256660461 10.39999961853027 1.422222256660461 11.20000076293945 1.51111114025116 C 12 1.51111114025116 12.44444465637207 1.688889026641846 12.71111106872559 1.777777791023254 C 13.06666660308838 1.955555558204651 13.33333301544189 2.133333444595337 13.60000038146973 2.400000095367432 C 13.86666679382324 2.666666746139526 14.0444450378418 2.9333336353302 14.22222232818604 3.288888931274414 C 14.31111145019531 3.555555582046509 14.48888874053955 4 14.48888874053955 4.800000190734863 C 14.48888874053955 5.600000381469727 14.57777786254883 5.8666672706604 14.57777786254883 8 C 14.57777786254883 10.13333320617676 14.57777786254883 10.39999961853027 14.48888874053955 11.20000076293945 C 14.48888874053955 12 14.31110954284668 12.44444465637207 14.22222137451172 12.71111106872559 C 14.04444408416748 13.06666660308838 13.86666584014893 13.33333301544189 13.59999942779541 13.60000038146973 C 13.33333301544189 13.86666679382324 13.06666564941406 14.0444450378418 12.71111011505127 14.22222232818604 C 12.44444370269775 14.31111145019531 11.99999904632568 14.48888874053955 11.19999980926514 14.48888874053955 C 10.39999961853027 14.48888874053955 10.13333320617676 14.57777786254883 8 14.57777786254883 C 5.866666793823242 14.57777786254883 5.600000381469727 14.57777786254883 4.800000190734863 14.48888874053955 C 4 14.48888874053955 3.555555582046509 14.31110954284668 3.288888931274414 14.22222137451172 C 2.933333396911621 14.04444408416748 2.666666746139526 13.86666584014893 2.400000095367432 13.59999942779541 C 2.133333444595337 13.33333301544189 1.955555558204651 13.06666564941406 1.777777791023254 12.71111011505127 C 1.688888907432556 12.44444370269775 1.51111114025116 11.99999904632568 1.51111114025116 11.19999980926514 C 1.51111114025116 10.39999961853027 1.422222256660461 10.13333320617676 1.422222256660461 8 C 1.422222256660461 5.866666793823242 1.422222256660461 5.600000381469727 1.51111114025116 4.800000190734863 C 1.51111114025116 4 1.688888907432556 3.555555582046509 1.777777791023254 3.288888931274414 C 1.955555558204651 2.933333396911621 2.133333444595337 2.666666746139526 2.400000095367432 2.400000095367432 C 2.666666746139526 2.04444432258606 2.933333396911621 1.866666555404663 3.288888931274414 1.777777791023254 C 3.555555582046509 1.688888907432556 4 1.51111114025116 4.800000190734863 1.51111114025116 C 5.600000381469727 1.422222256660461 5.866666793823242 1.422222256660461 8 1.422222256660461 M 8 0 C 5.866666793823242 0 5.511110782623291 0 4.711111545562744 0.08888889104127884 C 3.822222471237183 0.08888889104127884 3.288889169692993 0.2666666805744171 2.755555629730225 0.4444444477558136 C 2.222222328186035 0.6222222447395325 1.777777791023254 0.8888888955116272 1.333333373069763 1.333333373069763 C 0.8888888955116272 1.777777791023254 0.6222222447395325 2.222222328186035 0.4444444477558136 2.755555391311646 C 0.1777777820825577 3.288888931274414 0.08888889104127884 3.822222471237183 0.08888889104127884 4.711111545562744 C 0 5.511110782623291 0 5.866666793823242 0 8 C 0 10.13333320617676 0 10.48888874053955 0.08888889104127884 11.28888893127441 C 0.08888889104127884 12.17777729034424 0.2666666805744171 12.71111106872559 0.4444444477558136 13.24444389343262 C 0.6222222447395325 13.77777767181396 0.8888888955116272 14.22222232818604 1.333333373069763 14.66666698455811 C 1.777777791023254 15.11111164093018 2.222222328186035 15.37777709960938 2.755555391311646 15.55555534362793 C 3.288888692855835 15.7333345413208 3.822222471237183 15.91111087799072 4.711111545562744 15.91111087799072 C 5.511110782623291 16 5.866666793823242 16 8 16 C 10.13333320617676 16 10.48888874053955 16 11.28888893127441 15.91111087799072 C 12.17777729034424 15.91111087799072 12.71111106872559 15.73333263397217 13.24444389343262 15.55555534362793 C 13.77777767181396 15.37777709960938 14.22222232818604 15.11111164093018 14.66666698455811 14.66666698455811 C 15.11111164093018 14.22222232818604 15.37777709960938 13.77777767181396 15.55555534362793 13.24444389343262 C 15.7333345413208 12.71111011505127 15.91111087799072 12.17777729034424 15.91111087799072 11.28888893127441 C 15.91111087799072 10.39999961853027 16 10.13333320617676 16 8 C 16 5.866666793823242 16 5.511110782623291 15.91111087799072 4.711111545562744 C 15.91111087799072 3.822222471237183 15.73333263397217 3.288889169692993 15.55555534362793 2.755555629730225 C 15.37777709960938 2.222222328186035 15.11111164093018 1.777777791023254 14.66666698455811 1.333333492279053 C 14.22222232818604 0.8888890147209167 13.77777767181396 0.6222223043441772 13.24444389343262 0.4444445669651031 C 12.71111011505127 0.2666667997837067 12.17777729034424 0.0888889878988266 11.28888893127441 0.0888889878988266 C 10.48888874053955 0 10.13333320617676 0 8 0 M 8 3.911111116409302 C 5.688889026641846 3.911111116409302 3.911111116409302 5.688889026641846 3.911111116409302 8 C 3.911111116409302 10.31111145019531 5.777777671813965 12.08888912200928 8 12.08888912200928 C 10.31111145019531 12.08888912200928 12.08888912200928 10.22222232818604 12.08888912200928 8 C 12.08888912200928 5.777777671813965 10.31111145019531 3.911111116409302 8 3.911111116409302 M 8 10.66666698455811 C 6.488889217376709 10.66666698455811 5.333333492279053 9.511111259460449 5.333333492279053 8 C 5.333333492279053 6.488889217376709 6.488889217376709 5.333333492279053 8 5.333333492279053 C 9.511111259460449 5.333333492279053 10.66666698455811 6.488889217376709 10.66666698455811 8 C 10.66666698455811 9.511111259460449 9.511111259460449 10.66666698455811 8 10.66666698455811 M 12.26666736602783 2.755555391311646 C 11.73333358764648 2.755555391311646 11.28888893127441 3.200000047683716 11.28888893127441 3.733333110809326 C 11.28888893127441 4.266666412353516 11.73333358764648 4.711111068725586 12.26666736602783 4.711111068725586 C 12.80000019073486 4.711111068725586 13.24444484710693 4.266666412353516 13.24444484710693 3.733333110809326 C 13.24444389343262 3.200000047683716 12.80000019073486 2.755555391311646 12.26666736602783 2.755555391311646">
+					</path>
+				</svg>
+			</div>
+			<div id="Symbol_12___4" class="Symbol 12 – 4">
+				<svg class="Rectangle_393">
+					<rect fill="transparent" id="Rectangle_393" rx="0" ry="0" x="0" y="0" width="16" height="16">
+					</rect>
+				</svg>
+				<svg class="Path_2" viewBox="38 2 16 12.978">
+					<path fill="rgba(255,255,255,1)" id="Path_2" d="M 43.06666564941406 14.97777557373047 C 49.11111068725586 14.97777557373047 52.39999771118164 9.999998092651367 52.39999771118164 5.644444465637207 C 52.39999771118164 5.466666698455811 52.39999771118164 5.377777576446533 52.39999771118164 5.199999809265137 C 53.02222061157227 4.755555629730225 53.5555534362793 4.133333683013916 53.99999618530273 3.51111102104187 C 53.37777328491211 3.777777910232544 52.75555038452148 3.955555438995361 52.13333129882813 4.044444561004639 C 52.84444427490234 3.599999904632568 53.28888702392578 2.977777719497681 53.5555534362793 2.266666889190674 C 52.93333053588867 2.622222185134888 52.22222137451172 2.888888597488403 51.5111083984375 3.066666603088379 C 50.88888549804688 2.355555534362793 49.99999618530273 2 49.11111068725586 2 C 47.33333206176758 2 45.82221984863281 3.511110782623291 45.82221984863281 5.288888454437256 C 45.82221984863281 5.555554866790771 45.82221984863281 5.822221279144287 45.91110610961914 5.999999523162842 C 43.15555572509766 5.822221755981445 40.75555419921875 4.57777738571167 39.15555572509766 2.53333306312561 C 38.88888931274414 2.977777481079102 38.71110916137695 3.599999666213989 38.71110916137695 4.222221851348877 C 38.71110916137695 5.377777576446533 39.33333206176758 6.355555057525635 40.13333129882813 6.977777004241943 C 39.59999847412109 6.977777004241943 39.06666564941406 6.799999237060547 38.62221908569336 6.533332824707031 C 38.62221908569336 6.533332824707031 38.62221908569336 6.533332824707031 38.62221908569336 6.533332824707031 C 38.62221908569336 8.133332252502441 39.77777481079102 9.46666431427002 41.28888702392578 9.733331680297852 C 41.02222061157227 9.822220802307129 40.75555419921875 9.822220802307129 40.39999771118164 9.822220802307129 C 40.22221755981445 9.822220802307129 39.95555114746094 9.822220802307129 39.77777481079102 9.733331680297852 C 40.22221755981445 11.06666469573975 41.37777328491211 11.95555305480957 42.88888549804688 12.04444122314453 C 41.73332977294922 12.93333053588867 40.31110763549805 13.46666431427002 38.79999923706055 13.46666431427002 C 38.53333282470703 13.46666431427002 38.26666641235352 13.46666431427002 37.99999618530273 13.37777423858643 C 39.42222213745117 14.44444179534912 41.19999694824219 14.97777557373047 43.06666564941406 14.97777557373047">
+					</path>
+				</svg>
+			</div>
+			<div id="Symbol_11___4" class="Symbol 11 – 4">
+				<svg class="Rectangle_392">
+					<rect fill="transparent" id="Rectangle_392" rx="0" ry="0" x="0" y="0" width="16" height="16">
+					</rect>
+				</svg>
+				<svg class="Path_1" viewBox="80 0 8.356 16">
+					<path fill="rgba(255,255,255,1)" id="Path_1" d="M 85.42222595214844 16 L 85.42222595214844 8.711111068725586 L 87.91111755371094 8.711111068725586 L 88.26667785644531 5.8666672706604 L 85.42222595214844 5.8666672706604 L 85.42222595214844 4.088889122009277 C 85.42222595214844 3.288889169692993 85.68890380859375 2.666667222976685 86.84445190429688 2.666667222976685 L 88.35556030273438 2.666667222976685 L 88.35556030273438 0.08888889104127884 C 88 0.08888889104127884 87.11111450195313 0 86.13333129882813 0 C 84 0 82.4888916015625 1.333333373069763 82.4888916015625 3.733333110809326 L 82.4888916015625 5.866666793823242 L 80 5.866666793823242 L 80 8.711111068725586 L 82.4888916015625 8.711111068725586 L 82.4888916015625 16 L 85.42222595214844 16 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+	</div>
+	<svg class="Rectangle_394">
+		<rect fill="rgba(156,204,101,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_394" rx="0" ry="0" x="0" y="0" width="1710" height="978">
+		</rect>
+	</svg>
+	<div id="Color_A1_Group_11">
+		<div id="COLOR_A1_Text_27">
+			<span>COLOR</span>
+		</div>
+		<svg class="line_A1_Path_30" viewBox="0 1 375 1">
+			<path fill="rgba(241,249,255,1)" id="line_A1_Path_30" d="M 375 1 L 0 1 L 375 1 Z">
+			</path>
+		</svg>
+		<svg class="Path_180_A1_Path_31" viewBox="0 0 24 24">
+			<path fill="rgba(251,38,45,1)" id="Path_180_A1_Path_31" d="M 12 0 C 18.62741661071777 0 24 5.372583389282227 24 12 C 24 18.62741661071777 18.62741661071777 24 12 24 C 5.372583389282227 24 0 18.62741661071777 0 12 C 0 5.372583389282227 5.372583389282227 0 12 0 Z">
+			</path>
+		</svg>
+		<svg class="Ellipse_166_A1_Ellipse_34">
+			<ellipse fill="rgba(252,169,3,1)" id="Ellipse_166_A1_Ellipse_34" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_167_A1_Ellipse_35">
+			<ellipse fill="rgba(251,230,38,1)" id="Ellipse_167_A1_Ellipse_35" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_168_A1_Ellipse_36">
+			<ellipse fill="rgba(4,128,13,1)" id="Ellipse_168_A1_Ellipse_36" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_169_A1_Ellipse_37">
+			<ellipse fill="rgba(156,204,101,1)" id="Ellipse_169_A1_Ellipse_37" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_170_A1_Ellipse_38">
+			<ellipse fill="rgba(0,2,4,1)" id="Ellipse_170_A1_Ellipse_38" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_171_A1_Ellipse_39">
+			<ellipse fill="rgba(38,153,251,1)" id="Ellipse_171_A1_Ellipse_39" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+	</div>
+	<svg class="Ellipse_172">
+		<ellipse fill="rgba(156,204,101,1)" id="Ellipse_172" rx="12" ry="12" cx="12" cy="12">
+		</ellipse>
+	</svg>
+	<svg class="Ellipse_173">
+		<ellipse fill="rgba(156,204,101,1)" id="Ellipse_173" rx="17.5" ry="17.5" cx="17.5" cy="17.5">
+		</ellipse>
+	</svg>
+	<svg class="Ellipse_174">
+		<ellipse fill="rgba(156,204,101,1)" id="Ellipse_174" rx="14.5" ry="14.5" cx="14.5" cy="14.5">
+		</ellipse>
+	</svg>
+	<svg class="Path_198" viewBox="0 0 18 18">
+		<path fill="rgba(156,204,101,1)" id="Path_198" d="M 9 0 C 13.97056198120117 0 18 4.02943754196167 18 9 C 18 13.97056198120117 13.97056198120117 18 9 18 C 4.02943754196167 18 0 13.97056198120117 0 9 C 0 4.02943754196167 4.02943754196167 0 9 0 Z">
+		</path>
+	</svg>
+	<svg class="Path_199" viewBox="0 0 12 12">
+		<path fill="rgba(156,204,101,1)" id="Path_199" d="M 6 0 C 9.313708305358887 0 12 2.686291694641113 12 6 C 12 9.313708305358887 9.313708305358887 12 6 12 C 2.686291694641113 12 0 9.313708305358887 0 6 C 0 2.686291694641113 2.686291694641113 0 6 0 Z">
+		</path>
+	</svg>
+	<svg class="Ellipse_175">
+		<ellipse fill="rgba(156,204,101,1)" id="Ellipse_175" rx="7.5" ry="7.5" cx="7.5" cy="7.5">
+		</ellipse>
+	</svg>
+	<div id="Size_A1_Text_28">
+		<span>Size</span>
+	</div>
+	<svg class="eye_dropper_A1_Rectangle_26">
+		<pattern elementId="eye_dropper_A1_Rectangle_27" id="eye_dropper_A1_Rectangle_27_pattern" x="0" y="0" width="100%" height="100%">
+			<image x="0" y="0" width="100%" height="100%" href="eye_dropper_A1_Rectangle_27_pattern.png" xlink:href="eye_dropper_A1_Rectangle_27_pattern.png"></image>
+		</pattern>
+		<rect fill="url(#eye_dropper_A1_Rectangle_27_pattern)" id="eye_dropper_A1_Rectangle_26" rx="0" ry="0" x="0" y="0" width="39" height="39">
+		</rect>
+	</svg>
+	<svg class="Rectangle_395">
+		<rect fill="rgba(255,255,255,1)" stroke="rgba(85,139,47,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_395" rx="0" ry="0" x="0" y="0" width="34" height="20">
+		</rect>
+	</svg>
+	<svg class="Ellipse_176">
+		<ellipse fill="rgba(255,255,255,1)" stroke="rgba(85,139,47,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Ellipse_176" rx="15.5" ry="10" cx="15.5" cy="10">
+		</ellipse>
+	</svg>
+	<div id="ID25454_A1_Group_12">
+		<svg class="Path_181_A1_Path_34" viewBox="0 91.358 37 24.667">
+			<path fill="rgba(85,139,47,1)" id="Path_181_A1_Path_34" d="M 36.78835678100586 92.80295562744141 C 36.58275604248047 92.36616516113281 36.27739334106445 92.01612091064453 35.87273788452148 91.75300598144531 C 35.46801376342773 91.48976135253906 35.02130508422852 91.35800170898438 34.53315353393555 91.35800170898438 L 19.73299598693848 91.35800170898438 C 18.98780632019043 91.35800170898438 18.3712043762207 91.64041900634766 17.88298416137695 92.20578765869141 L 0.6158711314201355 111.9398498535156 C 0.2947110831737518 112.2994842529297 0.09876163303852081 112.7201385498047 0.02809019945561886 113.2019500732422 C -0.04271620884537697 113.6838226318359 0.01837035082280636 114.142951965332 0.2111473679542542 114.580078125 C 0.4166141450405121 115.0166549682617 0.7217094898223877 115.3665771484375 1.126500725746155 115.6298828125 C 1.531291961669922 115.8929901123047 1.977797627449036 116.0249557495117 2.466017484664917 116.0249557495117 L 17.26638221740723 116.0249557495117 C 18.01170349121094 116.0249557495117 18.6283073425293 115.7428741455078 19.11652755737305 115.1771697998047 L 36.38363647460938 95.44297027587891 C 36.70425796508789 95.08320617675781 36.90034484863281 94.66261291503906 36.97080993652344 94.18080902099609 C 37.0422248840332 93.69893646240234 36.98073196411133 93.23987579345703 36.78835678100586 92.80295562744141 Z M 17.2665843963623 113.5581359863281 L 2.466017484664917 113.5581359863281 L 8.941191673278809 106.1580963134766 L 23.74168968200684 106.1580963134766 L 17.2665843963623 113.5581359863281 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Navigation_Bar_A1_Component_15" class="Navigation Bar">
+		<svg class="Base_A1_Rectangle_22">
+			<rect fill="rgba(51,105,30,1)" id="Base_A1_Rectangle_22" rx="0" ry="0" x="0" y="0" width="220" height="1080">
+			</rect>
+		</svg>
+		<div id="FILES">
+			<span>FILES</span>
+		</div>
+		<div id="MY_PROFILE">
+			<span>MY PROFILE</span>
+		</div>
+		<div id="USER_PlANS">
+			<span>USER PlANS</span>
+		</div>
+		<div id="BLOG_A1_Text_25">
+			<span>BLOG</span>
+		</div>
+		<div id="CONTACT_A1_Text_26">
+			<span>CONTACT</span>
+		</div>
+		<div id="social_A1_Group_10">
+			<div id="Symbol_13___4_A1_Component_16" class="Symbol 13 – 4">
+				<svg class="Path_3_A1_Path_27" viewBox="0 0 16 16">
+					<path fill="rgba(255,255,255,1)" id="Path_3_A1_Path_27" d="M 8 1.422222256660461 C 10.13333320617676 1.422222256660461 10.39999961853027 1.422222256660461 11.20000076293945 1.51111114025116 C 12 1.51111114025116 12.44444465637207 1.688889026641846 12.71111106872559 1.777777791023254 C 13.06666660308838 1.955555558204651 13.33333301544189 2.133333444595337 13.60000038146973 2.400000095367432 C 13.86666679382324 2.666666746139526 14.0444450378418 2.9333336353302 14.22222232818604 3.288888931274414 C 14.31111145019531 3.555555582046509 14.48888874053955 4 14.48888874053955 4.800000190734863 C 14.48888874053955 5.600000381469727 14.57777786254883 5.8666672706604 14.57777786254883 8 C 14.57777786254883 10.13333320617676 14.57777786254883 10.39999961853027 14.48888874053955 11.20000076293945 C 14.48888874053955 12 14.31110954284668 12.44444465637207 14.22222137451172 12.71111106872559 C 14.04444408416748 13.06666660308838 13.86666584014893 13.33333301544189 13.59999942779541 13.60000038146973 C 13.33333301544189 13.86666679382324 13.06666564941406 14.0444450378418 12.71111011505127 14.22222232818604 C 12.44444370269775 14.31111145019531 11.99999904632568 14.48888874053955 11.19999980926514 14.48888874053955 C 10.39999961853027 14.48888874053955 10.13333320617676 14.57777786254883 8 14.57777786254883 C 5.866666793823242 14.57777786254883 5.600000381469727 14.57777786254883 4.800000190734863 14.48888874053955 C 4 14.48888874053955 3.555555582046509 14.31110954284668 3.288888931274414 14.22222137451172 C 2.933333396911621 14.04444408416748 2.666666746139526 13.86666584014893 2.400000095367432 13.59999942779541 C 2.133333444595337 13.33333301544189 1.955555558204651 13.06666564941406 1.777777791023254 12.71111011505127 C 1.688888907432556 12.44444370269775 1.51111114025116 11.99999904632568 1.51111114025116 11.19999980926514 C 1.51111114025116 10.39999961853027 1.422222256660461 10.13333320617676 1.422222256660461 8 C 1.422222256660461 5.866666793823242 1.422222256660461 5.600000381469727 1.51111114025116 4.800000190734863 C 1.51111114025116 4 1.688888907432556 3.555555582046509 1.777777791023254 3.288888931274414 C 1.955555558204651 2.933333396911621 2.133333444595337 2.666666746139526 2.400000095367432 2.400000095367432 C 2.666666746139526 2.04444432258606 2.933333396911621 1.866666555404663 3.288888931274414 1.777777791023254 C 3.555555582046509 1.688888907432556 4 1.51111114025116 4.800000190734863 1.51111114025116 C 5.600000381469727 1.422222256660461 5.866666793823242 1.422222256660461 8 1.422222256660461 M 8 0 C 5.866666793823242 0 5.511110782623291 0 4.711111545562744 0.08888889104127884 C 3.822222471237183 0.08888889104127884 3.288889169692993 0.2666666805744171 2.755555629730225 0.4444444477558136 C 2.222222328186035 0.6222222447395325 1.777777791023254 0.8888888955116272 1.333333373069763 1.333333373069763 C 0.8888888955116272 1.777777791023254 0.6222222447395325 2.222222328186035 0.4444444477558136 2.755555391311646 C 0.1777777820825577 3.288888931274414 0.08888889104127884 3.822222471237183 0.08888889104127884 4.711111545562744 C 0 5.511110782623291 0 5.866666793823242 0 8 C 0 10.13333320617676 0 10.48888874053955 0.08888889104127884 11.28888893127441 C 0.08888889104127884 12.17777729034424 0.2666666805744171 12.71111106872559 0.4444444477558136 13.24444389343262 C 0.6222222447395325 13.77777767181396 0.8888888955116272 14.22222232818604 1.333333373069763 14.66666698455811 C 1.777777791023254 15.11111164093018 2.222222328186035 15.37777709960938 2.755555391311646 15.55555534362793 C 3.288888692855835 15.7333345413208 3.822222471237183 15.91111087799072 4.711111545562744 15.91111087799072 C 5.511110782623291 16 5.866666793823242 16 8 16 C 10.13333320617676 16 10.48888874053955 16 11.28888893127441 15.91111087799072 C 12.17777729034424 15.91111087799072 12.71111106872559 15.73333263397217 13.24444389343262 15.55555534362793 C 13.77777767181396 15.37777709960938 14.22222232818604 15.11111164093018 14.66666698455811 14.66666698455811 C 15.11111164093018 14.22222232818604 15.37777709960938 13.77777767181396 15.55555534362793 13.24444389343262 C 15.7333345413208 12.71111011505127 15.91111087799072 12.17777729034424 15.91111087799072 11.28888893127441 C 15.91111087799072 10.39999961853027 16 10.13333320617676 16 8 C 16 5.866666793823242 16 5.511110782623291 15.91111087799072 4.711111545562744 C 15.91111087799072 3.822222471237183 15.73333263397217 3.288889169692993 15.55555534362793 2.755555629730225 C 15.37777709960938 2.222222328186035 15.11111164093018 1.777777791023254 14.66666698455811 1.333333492279053 C 14.22222232818604 0.8888890147209167 13.77777767181396 0.6222223043441772 13.24444389343262 0.4444445669651031 C 12.71111011505127 0.2666667997837067 12.17777729034424 0.0888889878988266 11.28888893127441 0.0888889878988266 C 10.48888874053955 0 10.13333320617676 0 8 0 M 8 3.911111116409302 C 5.688889026641846 3.911111116409302 3.911111116409302 5.688889026641846 3.911111116409302 8 C 3.911111116409302 10.31111145019531 5.777777671813965 12.08888912200928 8 12.08888912200928 C 10.31111145019531 12.08888912200928 12.08888912200928 10.22222232818604 12.08888912200928 8 C 12.08888912200928 5.777777671813965 10.31111145019531 3.911111116409302 8 3.911111116409302 M 8 10.66666698455811 C 6.488889217376709 10.66666698455811 5.333333492279053 9.511111259460449 5.333333492279053 8 C 5.333333492279053 6.488889217376709 6.488889217376709 5.333333492279053 8 5.333333492279053 C 9.511111259460449 5.333333492279053 10.66666698455811 6.488889217376709 10.66666698455811 8 C 10.66666698455811 9.511111259460449 9.511111259460449 10.66666698455811 8 10.66666698455811 M 12.26666736602783 2.755555391311646 C 11.73333358764648 2.755555391311646 11.28888893127441 3.200000047683716 11.28888893127441 3.733333110809326 C 11.28888893127441 4.266666412353516 11.73333358764648 4.711111068725586 12.26666736602783 4.711111068725586 C 12.80000019073486 4.711111068725586 13.24444484710693 4.266666412353516 13.24444484710693 3.733333110809326 C 13.24444389343262 3.200000047683716 12.80000019073486 2.755555391311646 12.26666736602783 2.755555391311646">
+					</path>
+				</svg>
+			</div>
+			<div id="Symbol_12___4_A1_Component_17" class="Symbol 12 – 4">
+				<svg class="Rectangle_393_A1_Rectangle_23">
+					<rect fill="transparent" id="Rectangle_393_A1_Rectangle_23" rx="0" ry="0" x="0" y="0" width="16" height="16">
+					</rect>
+				</svg>
+				<svg class="Path_2_A1_Path_28" viewBox="38 2 16 12.978">
+					<path fill="rgba(255,255,255,1)" id="Path_2_A1_Path_28" d="M 43.06666564941406 14.97777557373047 C 49.11111068725586 14.97777557373047 52.39999771118164 9.999998092651367 52.39999771118164 5.644444465637207 C 52.39999771118164 5.466666698455811 52.39999771118164 5.377777576446533 52.39999771118164 5.199999809265137 C 53.02222061157227 4.755555629730225 53.5555534362793 4.133333683013916 53.99999618530273 3.51111102104187 C 53.37777328491211 3.777777910232544 52.75555038452148 3.955555438995361 52.13333129882813 4.044444561004639 C 52.84444427490234 3.599999904632568 53.28888702392578 2.977777719497681 53.5555534362793 2.266666889190674 C 52.93333053588867 2.622222185134888 52.22222137451172 2.888888597488403 51.5111083984375 3.066666603088379 C 50.88888549804688 2.355555534362793 49.99999618530273 2 49.11111068725586 2 C 47.33333206176758 2 45.82221984863281 3.511110782623291 45.82221984863281 5.288888454437256 C 45.82221984863281 5.555554866790771 45.82221984863281 5.822221279144287 45.91110610961914 5.999999523162842 C 43.15555572509766 5.822221755981445 40.75555419921875 4.57777738571167 39.15555572509766 2.53333306312561 C 38.88888931274414 2.977777481079102 38.71110916137695 3.599999666213989 38.71110916137695 4.222221851348877 C 38.71110916137695 5.377777576446533 39.33333206176758 6.355555057525635 40.13333129882813 6.977777004241943 C 39.59999847412109 6.977777004241943 39.06666564941406 6.799999237060547 38.62221908569336 6.533332824707031 C 38.62221908569336 6.533332824707031 38.62221908569336 6.533332824707031 38.62221908569336 6.533332824707031 C 38.62221908569336 8.133332252502441 39.77777481079102 9.46666431427002 41.28888702392578 9.733331680297852 C 41.02222061157227 9.822220802307129 40.75555419921875 9.822220802307129 40.39999771118164 9.822220802307129 C 40.22221755981445 9.822220802307129 39.95555114746094 9.822220802307129 39.77777481079102 9.733331680297852 C 40.22221755981445 11.06666469573975 41.37777328491211 11.95555305480957 42.88888549804688 12.04444122314453 C 41.73332977294922 12.93333053588867 40.31110763549805 13.46666431427002 38.79999923706055 13.46666431427002 C 38.53333282470703 13.46666431427002 38.26666641235352 13.46666431427002 37.99999618530273 13.37777423858643 C 39.42222213745117 14.44444179534912 41.19999694824219 14.97777557373047 43.06666564941406 14.97777557373047">
+					</path>
+				</svg>
+			</div>
+			<div id="Symbol_11___4_A1_Component_18" class="Symbol 11 – 4">
+				<svg class="Rectangle_392_A1_Rectangle_24">
+					<rect fill="transparent" id="Rectangle_392_A1_Rectangle_24" rx="0" ry="0" x="0" y="0" width="16" height="16">
+					</rect>
+				</svg>
+				<svg class="Path_1_A1_Path_29" viewBox="80 0 8.356 16">
+					<path fill="rgba(255,255,255,1)" id="Path_1_A1_Path_29" d="M 85.42222595214844 16 L 85.42222595214844 8.711111068725586 L 87.91111755371094 8.711111068725586 L 88.26667785644531 5.8666672706604 L 85.42222595214844 5.8666672706604 L 85.42222595214844 4.088889122009277 C 85.42222595214844 3.288889169692993 85.68890380859375 2.666667222976685 86.84445190429688 2.666667222976685 L 88.35556030273438 2.666667222976685 L 88.35556030273438 0.08888889104127884 C 88 0.08888889104127884 87.11111450195313 0 86.13333129882813 0 C 84 0 82.4888916015625 1.333333373069763 82.4888916015625 3.733333110809326 L 82.4888916015625 5.866666793823242 L 80 5.866666793823242 L 80 8.711111068725586 L 82.4888916015625 8.711111068725586 L 82.4888916015625 16 L 85.42222595214844 16 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+	</div>
+	<svg class="Rectangle_396">
+		<rect fill="rgba(156,204,101,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_396" rx="0" ry="0" x="0" y="0" width="1425" height="978">
+		</rect>
+	</svg>
+	<div id="Color_A1_Group_11">
+		<div id="COLOR_A1_Text_27">
+			<span>COLOR</span>
+		</div>
+		<svg class="line_A1_Path_30" viewBox="0 1 375 1">
+			<path fill="rgba(241,249,255,1)" id="line_A1_Path_30" d="M 375 1 L 0 1 L 375 1 Z">
+			</path>
+		</svg>
+		<svg class="Path_180_A1_Path_31" viewBox="0 0 24 24">
+			<path fill="rgba(251,38,45,1)" id="Path_180_A1_Path_31" d="M 12 0 C 18.62741661071777 0 24 5.372583389282227 24 12 C 24 18.62741661071777 18.62741661071777 24 12 24 C 5.372583389282227 24 0 18.62741661071777 0 12 C 0 5.372583389282227 5.372583389282227 0 12 0 Z">
+			</path>
+		</svg>
+		<svg class="Ellipse_166_A1_Ellipse_34">
+			<ellipse fill="rgba(252,169,3,1)" id="Ellipse_166_A1_Ellipse_34" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_167_A1_Ellipse_35">
+			<ellipse fill="rgba(251,230,38,1)" id="Ellipse_167_A1_Ellipse_35" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_168_A1_Ellipse_36">
+			<ellipse fill="rgba(4,128,13,1)" id="Ellipse_168_A1_Ellipse_36" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_169_A1_Ellipse_37">
+			<ellipse fill="rgba(156,204,101,1)" id="Ellipse_169_A1_Ellipse_37" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_170_A1_Ellipse_38">
+			<ellipse fill="rgba(0,2,4,1)" id="Ellipse_170_A1_Ellipse_38" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+		<svg class="Ellipse_171_A1_Ellipse_39">
+			<ellipse fill="rgba(38,153,251,1)" id="Ellipse_171_A1_Ellipse_39" rx="12" ry="12" cx="12" cy="12">
+			</ellipse>
+		</svg>
+	</div>
+	<svg class="Ellipse_177">
+		<ellipse fill="rgba(156,204,101,1)" id="Ellipse_177" rx="12" ry="12" cx="12" cy="12">
+		</ellipse>
+	</svg>
+	<svg class="Ellipse_178">
+		<ellipse fill="rgba(156,204,101,1)" id="Ellipse_178" rx="17.5" ry="17.5" cx="17.5" cy="17.5">
+		</ellipse>
+	</svg>
+	<svg class="Ellipse_179">
+		<ellipse fill="rgba(156,204,101,1)" id="Ellipse_179" rx="14.5" ry="14.5" cx="14.5" cy="14.5">
+		</ellipse>
+	</svg>
+	<svg class="Path_200" viewBox="0 0 18 18">
+		<path fill="rgba(156,204,101,1)" id="Path_200" d="M 9 0 C 13.97056198120117 0 18 4.02943754196167 18 9 C 18 13.97056198120117 13.97056198120117 18 9 18 C 4.02943754196167 18 0 13.97056198120117 0 9 C 0 4.02943754196167 4.02943754196167 0 9 0 Z">
+		</path>
+	</svg>
+	<svg class="Path_201" viewBox="0 0 12 12">
+		<path fill="rgba(156,204,101,1)" id="Path_201" d="M 6 0 C 9.313708305358887 0 12 2.686291694641113 12 6 C 12 9.313708305358887 9.313708305358887 12 6 12 C 2.686291694641113 12 0 9.313708305358887 0 6 C 0 2.686291694641113 2.686291694641113 0 6 0 Z">
+		</path>
+	</svg>
+	<svg class="Ellipse_180">
+		<ellipse fill="rgba(156,204,101,1)" id="Ellipse_180" rx="7.5" ry="7.5" cx="7.5" cy="7.5">
+		</ellipse>
+	</svg>
+	<div id="Size_A1_Text_28">
+		<span>Size</span>
+	</div>
+	<svg class="eye_dropper_A1_Rectangle_26">
+		<pattern elementId="eye_dropper_A1_Rectangle_27" id="eye_dropper_A1_Rectangle_27_pattern" x="0" y="0" width="100%" height="100%">
+			<image x="0" y="0" width="100%" height="100%" href="eye_dropper_A1_Rectangle_27_pattern.png" xlink:href="eye_dropper_A1_Rectangle_27_pattern.png"></image>
+		</pattern>
+		<rect fill="url(#eye_dropper_A1_Rectangle_27_pattern)" id="eye_dropper_A1_Rectangle_26" rx="0" ry="0" x="0" y="0" width="39" height="39">
+		</rect>
+	</svg>
+	<svg class="Rectangle_397">
+		<rect fill="rgba(255,255,255,1)" stroke="rgba(85,139,47,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_397" rx="0" ry="0" x="0" y="0" width="34" height="20">
+		</rect>
+	</svg>
+	<svg class="Ellipse_181">
+		<ellipse fill="rgba(255,255,255,1)" stroke="rgba(85,139,47,1)" stroke-width="2px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Ellipse_181" rx="15.5" ry="10" cx="15.5" cy="10">
+		</ellipse>
+	</svg>
+	<div id="ID25454_A1_Group_12">
+		<svg class="Path_181_A1_Path_34" viewBox="0 91.358 37 24.667">
+			<path fill="rgba(85,139,47,1)" id="Path_181_A1_Path_34" d="M 36.78835678100586 92.80295562744141 C 36.58275604248047 92.36616516113281 36.27739334106445 92.01612091064453 35.87273788452148 91.75300598144531 C 35.46801376342773 91.48976135253906 35.02130508422852 91.35800170898438 34.53315353393555 91.35800170898438 L 19.73299598693848 91.35800170898438 C 18.98780632019043 91.35800170898438 18.3712043762207 91.64041900634766 17.88298416137695 92.20578765869141 L 0.6158711314201355 111.9398498535156 C 0.2947110831737518 112.2994842529297 0.09876163303852081 112.7201385498047 0.02809019945561886 113.2019500732422 C -0.04271620884537697 113.6838226318359 0.01837035082280636 114.142951965332 0.2111473679542542 114.580078125 C 0.4166141450405121 115.0166549682617 0.7217094898223877 115.3665771484375 1.126500725746155 115.6298828125 C 1.531291961669922 115.8929901123047 1.977797627449036 116.0249557495117 2.466017484664917 116.0249557495117 L 17.26638221740723 116.0249557495117 C 18.01170349121094 116.0249557495117 18.6283073425293 115.7428741455078 19.11652755737305 115.1771697998047 L 36.38363647460938 95.44297027587891 C 36.70425796508789 95.08320617675781 36.90034484863281 94.66261291503906 36.97080993652344 94.18080902099609 C 37.0422248840332 93.69893646240234 36.98073196411133 93.23987579345703 36.78835678100586 92.80295562744141 Z M 17.2665843963623 113.5581359863281 L 2.466017484664917 113.5581359863281 L 8.941191673278809 106.1580963134766 L 23.74168968200684 106.1580963134766 L 17.2665843963623 113.5581359863281 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="FILES_A1_Text_29">
+		<span>FILES</span>
+	</div>
+	<div id="Notebook_1">
+		<span>Notebook 1</span>
+	</div>
+	<div id="Notebook_2">
+		<span>Notebook 2</span>
+	</div>
+	<div id="Notebook_3">
+		<span>Notebook 3</span>
+	</div>
+	<div id="Notebook_4">
+		<span>Notebook 4</span>
+	</div>
+	<div id="Note">
+		<span>Note</span>
+	</div>
+	<div id="Note_A1_Text_35">
+		<span>Note</span>
+	</div>
+	<div id="Note_A1_Text_36">
+		<span>Note</span>
+	</div>
+	<div id="Note_A1_Text_37">
+		<span>Note</span>
+	</div>
+	<div id="Note_A1_Text_38">
+		<span>Note</span>
+	</div>
+	<div id="Note_A1_Text_39">
+		<span>Note</span>
+	</div>
+	<div id="Note_A1_Text_40">
+		<span>Note</span>
+	</div>
+	<div id="Note_A1_Text_41">
+		<span>Note</span>
+	</div>
+	<div id="Symbol_71___4" class="Symbol 71 – 4">
+		<svg class="Union_3" viewBox="0 0 15.557 15.557">
+			<path fill="rgba(51,105,30,1)" id="Union_3" d="M 7.778002738952637 9.192398071289063 L 1.413900017738342 15.55650043487549 L 0 14.14170074462891 L 6.363697528839111 7.778002738952637 L 0 1.413900017738342 L 1.413900017738342 0 L 7.778002738952637 6.363697528839111 L 14.14170074462891 0 L 15.55650043487549 1.413900017738342 L 9.192398071289063 7.778002738952637 L 15.55650043487549 14.14170074462891 L 14.14170074462891 15.55650043487549 L 7.778002738952637 9.192398071289063 Z">
+			</path>
+		</svg>
+	</div>
+</div>
+</body>
+</html>
