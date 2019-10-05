@@ -32,6 +32,7 @@ nav a {
 
 nav img {
     opacity: 0.3;
+    cursor: pointer;
 }
 
 .paper {

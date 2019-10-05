@@ -15,50 +15,50 @@
     <main>
     <div id="pensettings" class="pen">
             <h1>Color</h1>
-            <div class="circles">
-                <svg>
+            <div class="circles colors">
+                <svg id="red">
                  <circle cx="20" cy="20" r="20" stroke="white" fill="red" />
                 </svg>
-                <svg>
+                <svg id="orange">
                      <circle cx="20" cy="20" r="20" stroke="white" fill="orange" />
                 </svg>
-                <svg>
+                <svg id="yellow">
                     <circle cx="20" cy="20" r="20" stroke="white" fill="yellow" />
                 </svg>
-                <svg>
+                <svg id="dark-green">
                     <circle cx="20" cy="20" r="20" stroke="white" fill="#33691e" />
                 </svg>
-                <svg>
+                <svg id="light-green">
                     <circle cx="20" cy="20" r="20" stroke="white" fill="#9CCC65" />
                 </svg>
-                <svg>
+                <svg id="black">
                     <circle cx="20" cy="20" r="20" stroke="white" fill="black" />
                 </svg>
-                <svg>
+                <svg id="blue">
                     <circle cx="20" cy="20" r="20" stroke="white" fill="#57CFFC" />
                 </svg>
             </div>
             <h1>Size</h1>
-            <div class="circles">
-                <svg height= 10>
+            <div class="circles" id="sizes">
+                <svg height= 10 id="10">
                     <circle cx="5" cy="5" r="5" stroke="white" fill="#9CCC65" />
                 </svg>
-                <svg height=14>
+                <svg height=14 id="14">
                         <circle cx="7" cy="7" r="7" stroke="white" fill="#9CCC65" />
                 </svg>
-                <svg height=18>
+                <svg height=18 id="18">
                     <circle cx="9" cy="9" r="9" stroke="white" fill="#9CCC65" />
                 </svg>
-                <svg height=22>
+                <svg height=22 id="22">
                     <circle cx="11" cy="11" r="11" stroke="white" fill="#9CCC65" />
                 </svg>
-                <svg height=26>
+                <svg height=26 id="26">
                 <circle cx="13" cy="13" r="13" stroke="white" fill="#9CCC65" />
                 </svg>
-                <svg height=30>
+                <svg height=30 id="30">
                     <circle cx="15" cy="15" r="15" stroke="white" fill="#9CCC65" />
                 </svg>
-                <svg height=34>
+                <svg height=34 id="34">
                     <circle cx="17" cy="17" r="17" stroke="white" fill="#9CCC65" />
                 </svg>
             </div>
@@ -91,8 +91,9 @@
             opaq = true;
             $penIcon.css('opacity', '0.3');
         }
-
     });
+
+    
     })
 });
     </script>

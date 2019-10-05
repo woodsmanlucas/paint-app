@@ -4,6 +4,8 @@ Pressure.set('#test', {
     }
   });
 
+  $('.colors').click(_ => $(this).hide());
+
 
   context = document.getElementById('test').getContext("2d");
   
