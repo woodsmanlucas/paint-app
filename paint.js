@@ -1,19 +1,22 @@
 Pressure.set('#test', {
     change: function(force, event){
-      console.log(force);
+      // console.log(force);
     }
   });
+
 
   context = document.getElementById('test').getContext("2d");
   
   $('#test').mousedown(function(e){
     var mouseX = e.pageX - this.offsetLeft;
     var mouseY = e.pageY - this.offsetTop;
+    console.log(mouseY);
           
     paint = true;
-    addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
+    addClick(mouseX, mouseY);
     redraw();
   });
+
   
   $('#test').mousemove(function(e){
     if(paint){
