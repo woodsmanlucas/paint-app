@@ -4,6 +4,13 @@ Pressure.set('#test', {
     }
   });
   
+  if(typeof(Storage) !== "undefined"){
+    sessionStorage.setItem("size", 10);
+  }
+  else {
+    console.log("%c This Browser Doesn't support Web Storage ...", "color:red")
+  }
+
   context = document.getElementById('test').getContext("2d");
   
   $('#test').mousedown(function(e){
@@ -43,11 +50,10 @@ Pressure.set('#test', {
   }
   
   function redraw(){
-    context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
     
     context.strokeStyle = "black";
     context.lineJoin = "round";
-    context.lineWidth = 5;
+    context.lineWidth = 100;
               
     for(var i=0; i < clickX.length; i++) {		
       context.beginPath();
@@ -59,5 +65,9 @@ Pressure.set('#test', {
        context.lineTo(clickX[i], clickY[i]);
        context.closePath();
        context.stroke();
+    }
+
+    function clear(){
+      context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
     }
   }
