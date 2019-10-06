@@ -10,24 +10,27 @@ Pressure.set('#test', {
 
   $('.color').on('click', function () { color = this.id});
 
+  $('.size').on('click', function () { size = this.id});
+  
+
 
   context = document.getElementById('test').getContext("2d");
   
   $('#test').mousedown(function(e){
     var mouseX = e.pageX - this.offsetLeft;
     var mouseY = e.pageY - this.offsetTop;
-    console.log(mouseY);
-          
+
     paint = true;
-    addClick(mouseX, mouseY);
+    addClick(mouseX, mouseY, false, color, size);
     redraw();
   });
 
   
   $('#test').mousemove(function(e){
     if(paint){
-      addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true, color);
+      addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true, color, size);
       redraw();
+      console.log(size)
     }
   });
   
@@ -52,7 +55,7 @@ Pressure.set('#test', {
     clickY.push(y);
     clickDrag.push(dragging);
     colors.push(color)
-    sizes
+    sizes.push(size)
   }
   
   function redraw(){
@@ -60,14 +63,13 @@ Pressure.set('#test', {
 
     
     context.lineJoin = "round";
-    context.lineWidth = 10;
-    console.log(color);
               
     for(var i=0; i < clickX.length; i++) {		
       context.beginPath();
+      context.strokeStyle = colors[i];
+      context.lineWidth = sizes[i]
       if(clickDrag[i] && i){
-        console.log(colors[i])
-        context.strokeStyle = colors[i];
+
         context.moveTo(clickX[i-1], clickY[i-1]);
        }else{
          context.moveTo(clickX[i]-1, clickY[i]);
