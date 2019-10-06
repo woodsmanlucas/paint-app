@@ -4,7 +4,11 @@ Pressure.set('#test', {
     }
   });
 
-  $('.colors').click(_ => $(this).hide());
+
+  let color = 'black'
+  let size = 10;
+
+  $('.color').on('click', function () { color = this.id});
 
 
   context = document.getElementById('test').getContext("2d");
@@ -22,7 +26,7 @@ Pressure.set('#test', {
   
   $('#test').mousemove(function(e){
     if(paint){
-      addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
+      addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true, color);
       redraw();
     }
   });
@@ -38,26 +42,32 @@ Pressure.set('#test', {
   var clickX = new Array();
   var clickY = new Array();
   var clickDrag = new Array();
+  var colors = new Array();
+  var sizes = new Array();
   var paint;
   
-  function addClick(x, y, dragging)
+  function addClick(x, y, dragging, color, size)
   {
     clickX.push(x);
     clickY.push(y);
     clickDrag.push(dragging);
+    colors.push(color)
+    sizes
   }
   
   function redraw(){
     context.clearRect(0, 0, context.canvas.style.width, context.canvas.style.height); // Clears the canvas
 
     
-    context.strokeStyle = "black";
     context.lineJoin = "round";
     context.lineWidth = 10;
+    console.log(color);
               
     for(var i=0; i < clickX.length; i++) {		
       context.beginPath();
       if(clickDrag[i] && i){
+        console.log(colors[i])
+        context.strokeStyle = colors[i];
         context.moveTo(clickX[i-1], clickY[i-1]);
        }else{
          context.moveTo(clickX[i]-1, clickY[i]);
