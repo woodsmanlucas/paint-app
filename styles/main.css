@@ -33,6 +33,13 @@ header h1 {
     overflow: hidden;
 }
 
+.files {
+    background-color: #9CCC65;
+    color: white;
+    margin: 0;
+    padding: 40px;
+}
+
 nav a {
     text-decoration: none;
 }
