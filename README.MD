@@ -1,5 +1,5 @@
-### Elevator pitch:
-A drawing and notetaking app designed for use with a stylus.
+# Elevator pitch:
+### A drawing and notetaking app designed for use with a stylus.
 
 
 
