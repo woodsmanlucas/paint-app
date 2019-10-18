@@ -3,31 +3,29 @@ A drawing and notetaking app designed for use with a stylus.
 
 
 
-Features:
-Ability to take notes with a stylus
+Features
+  *Ability to take notes with a stylus:
     * pressure sensitivity
     * erase
     * color change
     * cut and paste
-    
-Ability to save notes:
+  * Ability to save notes:
     * User accounts
     * Database or download
-    * Notebooks
-    
-Ability to Share notes
+    * Notebooks    
+  * Ability to Share notes
 
 
 Chrome extension:
-    * Take notes on a web page
-    * Save notes and web page
-User accounts:
+  * Take notes on a web page
+  * Save notes and web page
+  * User accounts:
     * login
     * password reset
     * register
     * change email
     * delete account
-writing to text recognition
+  * writing to text recognition
 
 
 
