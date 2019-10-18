@@ -1,9 +1,9 @@
-###Elevator pitch:
+### Elevator pitch:
 A drawing and notetaking app designed for use with a stylus.
 
 
 
-##Features
+## Features
   * Ability to take notes with a stylus:
     * pressure sensitivity
     * erase
@@ -16,7 +16,7 @@ A drawing and notetaking app designed for use with a stylus.
   * Ability to Share notes
 
 
-##Chrome extension:
+## Chrome extension:
   * Take notes on a web page
   * Save notes and web page
   * User accounts:
@@ -30,15 +30,15 @@ A drawing and notetaking app designed for use with a stylus.
 
 
 
-##Requirements
+## Requirements
   * Record stylus activity
   * Save notes
   * recall saved notes
 
 
-Must have: 
-Ability to take notes
+## Must have: 
+* Ability to take notes
   * erase
   * color change
-Ability to save notes (or download)
+* Ability to save notes (or download)
   * probably will require user log in
