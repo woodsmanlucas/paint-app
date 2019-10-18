@@ -52,4 +52,13 @@
 ## High Fidelity Prototype
 
 ![Mobile Files Prototype](/wireframes/File.png)
+![Mobile Pen Prototype](/wireframes/Pen.png)
+
+
+![Desktop Prototype](/wireframes/Draw.png)
+![Desktop Prototype](/wireframes/Files.png)
+![Desktop Prototype](/wireframes/Settings.png)
+
+
+
 
