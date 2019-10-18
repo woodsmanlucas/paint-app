@@ -51,4 +51,5 @@
 
 ## High Fidelity Prototype
 
-![Mobile Files Prototype](/wireframes/file.png)
+![Mobile Files Prototype](/wireframes/File.png)
+
