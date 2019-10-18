@@ -10,7 +10,7 @@ Ability to take notes with a stylus
     * color change
     * cut and paste
     
-Ability to save notes
+Ability to save notes:
     * User accounts
     * Database or download
     * Notebooks
@@ -18,10 +18,10 @@ Ability to save notes
 Ability to Share notes
 
 
-Chrome extension
+Chrome extension:
     * Take notes on a web page
     * Save notes and web page
-User accounts
+User accounts:
     * login
     * password reset
     * register
