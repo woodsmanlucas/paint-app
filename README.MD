@@ -42,3 +42,8 @@
   * color change
 * Ability to save notes (or download)
   * probably will require user log in
+
+
+## Database Diagram
+
+![Database Diagram](/Drawing1.svg)
