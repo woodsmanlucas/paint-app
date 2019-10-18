@@ -9,10 +9,12 @@ Ability to take notes with a stylus
     * erase
     * color change
     * cut and paste
+    
 Ability to save notes
     * User accounts
     * Database or download
     * Notebooks
+    
 Ability to Share notes
 
 
