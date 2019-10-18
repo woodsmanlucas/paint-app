@@ -47,3 +47,8 @@
 ## Database Diagram
 
 ![Database Diagram](/Drawing1.svg)
+
+
+## High Fidelity Prototype
+
+![Mobile Files Prototype](/wireframes/file.png)
