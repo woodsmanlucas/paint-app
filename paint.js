@@ -1,5 +1,5 @@
 
-Pressure.set('#test', {
+Pressure.set('#canvas', {
     change: function(force, event){
       // console.log(force);
     }
@@ -15,9 +15,9 @@ Pressure.set('#test', {
   
 
 
-  context = document.getElementById('test').getContext("2d");
+  context = document.getElementById('canvas').getContext("2d");
   
-  $('#test').mousedown(function(e){
+  $('#canvas').mousedown(function(e){
     var mouseX = e.pageX - this.offsetLeft;
     var mouseY = e.pageY - this.offsetTop;
 
@@ -27,19 +27,18 @@ Pressure.set('#test', {
   });
 
   
-  $('#test').mousemove(function(e){
+  $('#canvas').mousemove(function(e){
     if(paint){
       addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true, color, size);
       redraw();
-      console.log(size)
     }
   });
   
-  $('#test').mouseup(function(e){
+  $('#canvas').mouseup(function(e){
     paint = false;
   });
   
-  $('#test').mouseleave(function(e){
+  $('#canvas').mouseleave(function(e){
     paint = false;
   });
   
@@ -55,8 +54,8 @@ Pressure.set('#test', {
     clickX.push(x);
     clickY.push(y);
     clickDrag.push(dragging);
-    colors.push(color)
-    sizes.push(size)
+    colors.push(color);
+    sizes.push(size);
   }
   
   function redraw(){
@@ -68,7 +67,7 @@ Pressure.set('#test', {
     for(var i=0; i < clickX.length; i++) {		
       context.beginPath();
       context.strokeStyle = colors[i];
-      context.lineWidth = sizes[i]
+      context.lineWidth = sizes[i];
       if(clickDrag[i] && i){
 
         context.moveTo(clickX[i-1], clickY[i-1]);

@@ -6,13 +6,18 @@ h1, h3, h4, h2, p {
 nav li {
     list-style-type: none;
     line-height: 40px;
-
+    color: white;
 }
 
 nav ul {
     display: flex;
     justify-content: space-around;
     margin: 0;
+    padding: 0;
+}
+
+.desktop{
+    display: none
 }
 
 header{
@@ -23,14 +28,6 @@ header{
 
 header h1 {
     display: none;
-}
-
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
 }
 
 .files {
@@ -55,7 +52,6 @@ nav img {
     width: auto;
     height: 90vh;
     object-fit: cover;
-    position: relative;
     overflow: hidden;
 }
 
@@ -173,4 +169,53 @@ footer {
 
 footer p {
     color: white;
+}
+
+@media(min-width: 1200px){
+    .wrapper{
+        display:flex;
+    }
+
+    .desktop{
+        display: block;
+        width: 100px;
+        height: 100vh;
+        left:0;
+        top:0;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: calc(100vw - 100px);
+        background-color: #fff;
+    }
+
+    .paper{
+        width: calc(100vw - 100px);
+        height: 98vh;
+    }
+
+    .pen{
+        width: calc(100vw - 100px);
+        display: flex;
+        background-color: #9CCC65;
+    }
+
+    .circles{
+        width: 40%;
+    }
+
+    .desktop ul{
+        display: block
+    }
+    
+    .desktop a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .mobile{
+        display: none;
+    }
 }

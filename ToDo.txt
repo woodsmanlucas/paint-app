@@ -1,0 +1,7 @@
+1. Figure out why topbar on desktop looks weird.
+2. Add slider functionality
+3. Fix bug for clicking on pen then switching to desktop.
+4. Add login functionality
+5. Add a way to save to server
+6. Add erase functionality
+7. Add pressure sensitivity
