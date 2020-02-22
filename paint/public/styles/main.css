@@ -1,0 +1,221 @@
+h1, h3, h4, h2, p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+nav li {
+    list-style-type: none;
+    line-height: 40px;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop{
+    display: none
+}
+
+header{
+    background-color: #33691E;
+    margin: 0;
+    width: 100%
+}
+
+header h1 {
+    display: none;
+}
+
+.files {
+    background-color: #9CCC65;
+    color: white;
+    margin: 0;
+    padding: 40px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav img {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.paper {
+    cursor: crosshair;
+    max-width: 100%;
+    width: auto;
+    height: 90vh;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+canvas {
+    position: absolute;
+    left: 0;
+}
+
+.pen{
+    display: none;
+    width: 100vw;
+
+}
+
+main .show.pen{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    background: #fff;
+    z-index: 1;
+    padding-bottom: 100px;
+    border-bottom: #33691E 3px solid;
+}
+
+
+.pen h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #33691E;
+}
+
+.circles{
+    display: flex;
+    justify-content:space-between;
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+}
+
+.slidercontainer{
+    padding-top: 80px;
+
+    width: 100%;
+}
+
+.slider{
+    width: 90%;
+    -webkit-appearance: none;
+    background: #9CCC65;
+    outline: none;
+    border-radius: 12px;
+    height: 10px;
+}
+
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 10px solid #33691E;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb{
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 10px solid #33691E;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+.user-footer{
+    background-color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    color: #33691E;
+}
+
+.user-footer p {
+    color: #33691E;
+}
+
+.right {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Copyright {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Can't get this margin-top thing to work \/ */
+footer {
+    width: 100%;
+    background-color: #33691e;
+    margin-top: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer p {
+    color: white;
+}
+
+@media(min-width: 1200px){
+    .wrapper{
+        display:flex;
+    }
+
+    .desktop{
+        display: block;
+        width: 100px;
+        height: 100vh;
+        left:0;
+        top:0;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: calc(100vw - 100px);
+        background-color: #fff;
+    }
+
+    .paper{
+        width: calc(100vw - 100px);
+        height: 98vh;
+    }
+
+    .pen{
+        width: calc(100vw - 100px);
+        display: flex;
+        background-color: #9CCC65;
+    }
+
+    .circles{
+        width: 40%;
+    }
+
+    .desktop ul{
+        display: block
+    }
+    
+    .desktop a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .mobile{
+        display: none;
+    }
+}
