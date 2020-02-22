@@ -23,7 +23,7 @@ namespace roleDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LoginController : Controller
+    public class AuthController : Controller
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private IConfiguration _config;
@@ -31,7 +31,7 @@ namespace roleDemo.Controllers
         private ApplicationDbContext _context;
         private UserManager<IdentityUser> _userManager;
 
-        public LoginController(SignInManager<IdentityUser> signInManager,
+        public AuthController(SignInManager<IdentityUser> signInManager,
                                 IConfiguration config,
                                 IServiceProvider serviceProvider,
                                 ApplicationDbContext context,
@@ -72,9 +72,17 @@ namespace roleDemo.Controllers
             return Ok(roles);
         }
 
-
+        [HttpPost]
+        [Route("Register")]
+        public async Task<IActionResult> Register([FromBody]LoginVM loginVM)
+        {
+            var user = new IdentityUser { UserName = loginVM.Email, Email = loginVM.Email };
+            var result = await _userManager.CreateAsync(user, loginVM.Password);
+            return Ok(result);
+        }
 
         [HttpPost]
+        [Route("Login")]
         public async Task<JsonResult> OnPostAsync([FromBody]LoginVM loginVM)
         {
             dynamic jsonResponse = new JObject();
