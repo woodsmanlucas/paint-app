@@ -52,7 +52,7 @@ nav img {
     width: auto;
     height: 90vh;
     object-fit: cover;
-    overflow: hidden;
+    overflow: none;
 }
 
 canvas {
@@ -209,7 +209,7 @@ footer p {
     .desktop ul{
         display: block
     }
-    
+
     .desktop a{
         text-decoration: none;
         color: white;

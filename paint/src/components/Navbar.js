@@ -1,22 +1,23 @@
 import React from 'react'
-import $ from 'jQuery'
+import $ from 'jquery'
 
 export function Navbar(){
     return (<header>
         <h1><a href="index.html">Draw</a></h1>
-        <nav class="mobile">
+        <nav className="mobile">
            <ul>
-               <li><img id="Folder" src="images/Folder.svg " alt="Folder icon" /></li>
-               <li><a href="file.html"><img id="image" src="images/image.svg" alt="import image icon" /></a></li>
+               <li><a href="file"><img id="Folder" src="images/Folder.svg " alt="Folder icon" /></a></li>
+               <li><a href="image"><img id="image" src="images/image.svg" alt="import image icon" /></a></li>
                <li id="pen" ><img id="pen-icon" src="images/pen.svg" alt="pen icon" /></li>
-               <li><a href="user.html"><img id="user" src="images/user.svg" alt="user settings icon" /></a></li>
+               <li><a href="user"><img id="user" src="images/user.svg" alt="user settings icon" /></a></li>
            </ul>
         </nav>
-        <nav class="desktop">
+        <nav className="desktop">
             <ul>
-                <li><a href="file.html">Files</a></li>
-                <li><a href="user.html">User Settings</a></li>
-                <li>Log In</li>
+                <li><a href="file">Files</a></li>
+                <li><a href="user">User Settings</a></li>
+                <li><a href="Login">Log In</a></li>
+                <li><a href="Register">Register</a></li>
             </ul>
         </nav>
         </header>)
