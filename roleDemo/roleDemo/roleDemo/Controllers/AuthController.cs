@@ -74,88 +74,101 @@ namespace roleDemo.Controllers
 
         [HttpPost]
         [Route("Register")]
-        public async Task<IActionResult> Register([FromBody]LoginVM loginVM)
-        {
-            var user = new IdentityUser { UserName = loginVM.Email, Email = loginVM.Email };
-            var result = await _userManager.CreateAsync(user, loginVM.Password);
-            return Ok(result);
-        }
-
-        [HttpPost]
-        [Route("Login")]
-        public async Task<JsonResult> OnPostAsync([FromBody]LoginVM loginVM)
+        public async Task<JsonResult> Register([FromBody]LoginVM loginVM)
         {
             dynamic jsonResponse = new JObject();
-            if (ModelState.IsValid)
+            var user = new IdentityUser { UserName = loginVM.Email, Email = loginVM.Email };
+            var result = await _userManager.CreateAsync(user, loginVM.Password);
+            if (result.Succeeded)
             {
-                var result = await
-                            _signInManager.PasswordSignInAsync(loginVM.Email.ToUpper(),
-                            loginVM.Password, loginVM.RememberMe, lockoutOnFailure: true);
-                if (result.Succeeded)
+                if (user != null)
                 {
-                    var UserManager = _serviceProvider
-                        .GetRequiredService<UserManager<IdentityUser>>();
-                    var user = await UserManager.FindByEmailAsync(loginVM.Email);
-
-                    if (user != null)
-                    {
-                        var tokenString = GenerateJSONWebToken(user);
-                        jsonResponse.token = tokenString;
-                        jsonResponse.status = "OK";
-                        return Json(jsonResponse);
-                    }
-                }
-                else if (result.IsLockedOut)
-                {
-                    jsonResponse.token = "";
-                    jsonResponse.status = "Locked Out";
+                    var tokenString = GenerateJSONWebToken(user);
+                    jsonResponse.token = tokenString;
+                    jsonResponse.status = "OK";
                     return Json(jsonResponse);
                 }
             }
-            jsonResponse.token = "";
-            jsonResponse.status = "Invalid Login";
-            return Json(jsonResponse);
-        }
+        jsonResponse.token = "";
+        jsonResponse.status = "Invalid Login";
+        return Json(jsonResponse);
+    }
 
-        List<Claim> AddUserRoleClaims(List<Claim> claims, string userId)
+    [HttpPost]
+    [Route("Login")]
+    public async Task<JsonResult> OnPostAsync([FromBody]LoginVM loginVM)
+    {
+        dynamic jsonResponse = new JObject();
+        if (ModelState.IsValid)
         {
-            // Get current user's roles. 
-            var userRoleList = _context.UserRoles.Where(ur => ur.UserId == userId);
-            var roleList = from ur in userRoleList
-                           from r in _context.Roles
-                           where r.Id == ur.RoleId
-                           select new { r.Name };
-
-            // Add each of the user's roles to the claims list.
-            foreach (var roleItem in roleList)
+            var result = await
+                        _signInManager.PasswordSignInAsync(loginVM.Email.ToUpper(),
+                        loginVM.Password, loginVM.RememberMe, lockoutOnFailure: true);
+            if (result.Succeeded)
             {
-                claims.Add(new Claim(ClaimTypes.Role, roleItem.Name));
-            }
-            return claims;
-        }
+                var UserManager = _serviceProvider
+                    .GetRequiredService<UserManager<IdentityUser>>();
+                var user = await UserManager.FindByEmailAsync(loginVM.Email);
 
-        string GenerateJSONWebToken(IdentityUser user)
+                if (user != null)
+                {
+                    var tokenString = GenerateJSONWebToken(user);
+                    jsonResponse.token = tokenString;
+                    jsonResponse.status = "OK";
+                    return Json(jsonResponse);
+                }
+            }
+            else if (result.IsLockedOut)
+            {
+                jsonResponse.token = "";
+                jsonResponse.status = "Locked Out";
+                return Json(jsonResponse);
+            }
+        }
+        jsonResponse.token = "";
+        jsonResponse.status = "Invalid Login";
+        return Json(jsonResponse);
+    }
+
+    List<Claim> AddUserRoleClaims(List<Claim> claims, string userId)
+    {
+        // Get current user's roles. 
+        var userRoleList = _context.UserRoles.Where(ur => ur.UserId == userId);
+        var roleList = from ur in userRoleList
+                       from r in _context.Roles
+                       where r.Id == ur.RoleId
+                       select new { r.Name };
+
+        // Add each of the user's roles to the claims list.
+        foreach (var roleItem in roleList)
         {
-            var securityKey
-                = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
-            var credentials
-                = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-            var claims = new List<Claim> {
+            claims.Add(new Claim(ClaimTypes.Role, roleItem.Name));
+        }
+        return claims;
+    }
+
+    string GenerateJSONWebToken(IdentityUser user)
+    {
+        var securityKey
+            = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+        var credentials
+            = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+        var claims = new List<Claim> {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Email),
                 new Claim(JwtRegisteredClaimNames.Jti,
                             Guid.NewGuid().ToString()),
                 new Claim(ClaimTypes.NameIdentifier, user.Id)
             };
 
-            claims = AddUserRoleClaims(claims, user.Id);
+        claims = AddUserRoleClaims(claims, user.Id);
 
-            var token = new JwtSecurityToken(_config["Jwt:Issuer"],
-                _config["Jwt:Issuer"],
-                claims,
-                expires: DateTime.Now.AddMinutes(120),
-                signingCredentials: credentials);
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
+        var token = new JwtSecurityToken(_config["Jwt:Issuer"],
+            _config["Jwt:Issuer"],
+            claims,
+            expires: DateTime.Now.AddMinutes(120),
+            signingCredentials: credentials);
+        return new JwtSecurityTokenHandler().WriteToken(token);
     }
+}
 
 }

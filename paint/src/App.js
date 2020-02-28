@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import { Navbar } from './components/Navbar'
 import { Login } from './components/Login'
+import { Register } from './components/Register'
+
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
         <Switch>
         <Route path="/Login">
           <Login />
+        </Route>
+        <Route path="/Register">
+          <Register />
         </Route>
         </Switch>
     </Router>
