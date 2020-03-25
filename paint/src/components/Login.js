@@ -64,7 +64,7 @@ export function Login(){
       }
 
     return(
-        <div>
+        <div className="login">
             <h1>{loginMessage}</h1>
             <form onSubmit={login}>
                 <input type="text" value={emailValue} onChange={handleEmailFieldChange} placeholder="email"/>

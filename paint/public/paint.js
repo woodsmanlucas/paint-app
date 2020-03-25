@@ -1,9 +1,9 @@
-
 Pressure.set('#canvas', {
     change: function(force, event){
       // console.log(force);
     }
-  });
+  }
+);
 
 
   let color = 'black'
@@ -14,7 +14,7 @@ Pressure.set('#canvas', {
   $('.size').on('click', function () { size = this.id});
 
 
-
+  canvas = document.getElementById('canvas')
   context = document.getElementById('canvas').getContext("2d");
 
   $('#canvas').mousedown(function(e){
@@ -59,8 +59,7 @@ Pressure.set('#canvas', {
   }
 
   function redraw(){
-    context.clearRect(0, 0, context.canvas.style.width, context.canvas.style.height); // Clears the canvas
-
+    context.clearRect(0, 0, canvas.width, canvas.height); // Clears the canvas
 
     context.lineJoin = "round";
 
@@ -78,4 +77,13 @@ Pressure.set('#canvas', {
        context.closePath();
        context.stroke();
     }
+  }
+
+  function clearCanvas() {
+    clickX = new Array();
+    clickY = new Array();
+    clickDrag = new Array();
+    colors = new Array();
+    sizes = new Array();
+    redraw()
   }

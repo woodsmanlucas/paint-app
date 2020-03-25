@@ -78,7 +78,7 @@ export function Register(){
       }
 
     return(
-        <div>
+        <div className="register">
             <h1>{loginMessage}</h1>
             <form onSubmit={register}>
                 <input type="text" value={emailValue} onChange={handleEmailFieldChange} placeholder="email"/>
